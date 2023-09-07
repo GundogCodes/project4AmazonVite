@@ -11,9 +11,6 @@ export default function NavBar(props){
               <Link to={path} key={key} >{key}</Link>
             </div>
           ))}
-
-          {/* placing category bar in the navbar (will modify to be a button) */}
-          <CategoryBar/>
         </nav>
       </div>
     )
