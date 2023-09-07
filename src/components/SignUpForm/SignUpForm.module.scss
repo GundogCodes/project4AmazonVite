@@ -1,0 +1,121 @@
+.createAccount {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+//   .createAccountLogo {
+//     margin-top: 40px;
+//     margin-bottom: 25px;
+//     object-fit: contain;
+//     width: 200px;
+//     margin-right: auto;
+//     margin-left: auto;
+//     height: 50px;
+//   }
+
+.createAccount__container {
+    width: 300px;
+    // height: fit-content;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    margin-bottom: 200px;
+    border: 1px solid lightgray;
+    padding: 20px;
+
+}
+
+.createAccount__heading {
+    color: #111111;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.createAccount__container>h1 {
+    color: #111111;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin: 0px 0px 10px;
+    padding: 0px 0px 4px;
+    height: 15px;
+}
+
+.createAccount__divider {
+    border: none;
+    border-top: 5px solid rgb(43, 182, 182);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.createAccount__container>form>h5 {
+    margin-bottom: 5px;
+    color: #111111;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.createAccount__container>form>input {
+    height: 30px;
+    margin-bottom: 0px;
+    background-color: white;
+    width: 98%;
+    border-radius: 10px;
+    border: 1.5px solid lightgray;
+    color: #111111;
+}
+
+.createAccount__container > form > input[type="text"] {
+    height: 30px;
+    margin-bottom: 0px;
+    background-color: white;
+    width: 98%;
+    border-radius: 10px;
+    border: 1.5px solid lightgray;
+    color: #111111;
+  }
+
+.createAccount__container>p {
+    margin-top: 15px;
+    font-size: 12px;
+    color: black;
+}
+
+.createAccount__continueButton {
+    background: #151413;
+    border-radius: 2px;
+    width: 100%;
+    height: 30px;
+    border: 0.1px transparent;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    background-color: #ffd812;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+}
+
+.createAccount__registerButton {
+    border-radius: 2px;
+    width: 100%;
+    height: 30px;
+    border: 1px solid;
+    margin-top: 10px;
+    background: white;
+    color: #111111;
+    border-radius: 5px;
+    border-color: darkgray;
+}
+
+.createAccount__buttonContainer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}

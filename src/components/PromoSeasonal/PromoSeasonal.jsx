@@ -1,5 +1,5 @@
 import styles from './PromoSeasonal.module.scss'; 
-import items from '../config/seed.cjs';
+import items from '../../../config/seed.cjs'
 
 export default function PromoSeasonal({ item }) {
     

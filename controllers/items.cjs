@@ -1,25 +1,25 @@
-const Item = require('../models/item.cjs')
+const Item = require('../models/item.cjs');
 
 module.exports = {
   index,
-  show
+  show,
 };
 
 async function index(req, res) {
-  try{
-    const items = await Item.find({})
+  try {
+    const items = await Item.find({});
     items.sort((a, b) => a.category.sortOrder - b.category.sortOrder);
     res.status(200).json(items);
-  }catch(e){
+  } catch (e) {
     res.status(400).json({ msg: e.message });
   }
 }
 
 async function show(req, res) {
-  try{
+  try {
     const item = await Item.findById(req.params.id);
     res.status(200).json(item);
-  }catch(e){
+  } catch (e) {
     res.status(400).json({ msg: e.message });
-  }  
+  }
 }

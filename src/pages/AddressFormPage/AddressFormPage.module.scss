@@ -1,0 +1,93 @@
+.AddressForm{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    .currentAddress{
+        box-shadow: 8px 8px 3px 3px gainsboro;
+        margin: 10vmin;
+        padding: 2vmin;
+        border-style: dashed;
+        border-color: rgba(199,199,199);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 33vw;
+        height: 65vh;
+        border-width: 3px;
+        border-radius: 10px;
+        .username{
+            font-weight: bold;
+        }
+    }
+    .theForm{
+        box-shadow: 8px 8px 3px 3px gainsboro;
+        padding-left: 1vmin;
+        padding-right: 1vmin;
+        border-style: solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 33vw;
+        height: 70vh;
+        font-weight: bold;
+        border-width: 1px;
+        border-radius: 10px;
+        h3{
+            justify-self: flex-start;
+            border-style: solid;
+            border-radius: 10px;
+            border-width: 1px;
+            align-self: flex-start;
+            width: 33vw;
+            padding-top: 1vmin;
+            padding-bottom: 1vmin;
+            display: flex;
+            align-items: center;
+            span{
+                color:rgba(90,90,92);
+                padding-left: 3px;
+                
+                margin-left: 1vmin;
+            }
+            img{
+                margin-left: 1vmin;
+                width:3vw;
+            }
+        }
+        h1{
+            align-self: flex-start;
+        }
+        .text{
+            align-self:flex-start;
+            font-size: 2vmin;
+            width: 33vw;
+        }
+        .inputText{
+            height: 2.5vmin;
+            border-width: 1px;
+            border-radius: 10px;
+            align-self:flex-start;
+            font-size: 2vmin;
+            width: 33vw;
+        }
+        .submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            margin-top: 2vmin;
+            font-weight: bold;
+            width: 16.5vw;
+            padding-top: 0.5vmin;
+            padding-bottom: 0.5vmin;
+            align-self:flex-start;
+            background-color:rgba(249,217,76) ;
+            border-radius: 15px;
+    }
+}
+
+}

@@ -18,7 +18,7 @@ router.delete('/:id', dataController.deleteUser);
 router.put('/:id', dataController.updateUser, apiController.auth);
 //C
 router.post('/new', dataController.createUser, apiController.auth);
-router.post('/login', dataController.loginUser, apiController.auth);
+router.post('/login', dataController.login, apiController.auth);
 //E
 //S
 router.get('/:id', dataController.getUser);

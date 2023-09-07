@@ -1,7 +1,9 @@
-export default function WishlistPage(){
-    return(
+export default function WishlistPage({user, setUser}){
+    const name = user.name
+    
+    return( 
         <>
-        WishlistPage
+      <h1>{name}</h1>
         </>
     )
 }

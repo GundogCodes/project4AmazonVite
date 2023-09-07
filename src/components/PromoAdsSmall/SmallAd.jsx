@@ -1,16 +1,16 @@
-import styles from './SmallAd.module.scss'; 
-import items from '../config/seed.cjs';
+// import styles from './SmallAd.module.scss'; 
+// //import items from '../../../config/seed.cjs'
 
-export default function SmallAd({ item }) {
-    const promoItems = item.map(i => 
-        <items
-            item={i}
-        />
-    )
+// export default function SmallAd({ item }) {
+//     // const promoItems = item.map(i => 
+//     //     <items
+//     //         item={i}
+//     //     />
+//     // )
     
-    return (
-        <div>
+//     return (
+//         <div>
 
-        </div>
-    )
-}
+//         </div>
+//     )
+// }

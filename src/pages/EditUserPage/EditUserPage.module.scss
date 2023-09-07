@@ -1,0 +1,69 @@
+.EditUserPage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+        width: 35vw;
+
+    }
+    h2{
+        width: 35vw;
+    }
+    form{
+        border-radius: 15px;
+        border-style: solid;
+        border-color: rgba(199,199,199);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 35vw;
+        height: 70vh;
+        padding: 2vmin;
+        box-shadow: 8px 8px 3px 3px gainsboro;
+        .editDiv{
+            
+            width: 35vw;
+            height: 70vh;
+            
+            padding: 1svmin;
+            border-style: solid;
+            border-radius: 15px;
+            border-width: 1px;
+            .heading{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            button{
+                margin-bottom: 1vh;
+                box-shadow: 3px 3px 3px 3px gainsboro;
+                background-color: white;
+            }
+        }
+        label{
+            font-size: 2.5vmin;
+            font-weight: bold;
+        }
+        input{
+            border-color: rgba(199,199,199);
+            font-size: 2.5vmin;
+            border-radius: 10px;
+            margin-top: 1vmin;
+            margin-bottom: 1vmin;
+        }
+        button{
+            margin-top: 2vmin;
+            align-self: flex-start;
+            width: 6.5vw;
+            font-size: 2.5vmin;
+            border-radius: 15px;
+            border-color: white;
+            background-color: rgba(249,217,76);
+        }
+    }
+}

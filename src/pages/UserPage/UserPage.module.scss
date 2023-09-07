@@ -1,0 +1,71 @@
+.UserPage{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family:  "Amazon Ember", Arial, sans-serif;
+    .user{
+        margin-top: 10vh;
+        width: 78vw;
+        font-size: 3vmin;
+    }
+    .userOptions{
+        
+        position: relative;
+        display:flex;
+        flex-direction: column;
+        width: 80vw;
+        justify-content: center;
+        align-items: center;
+        h1{
+          width: 78vw;
+        }
+        .row1{
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .row2{
+            display: flex;
+            flex-direction: row;
+        
+        }
+        .box{
+            box-shadow: 8px 8px 3px 3px gainsboro;
+        display: flex;
+            flex-direction: row;
+            align-items: center;
+            border:solid;
+            border-color: black;
+            border-width: 1px;
+            width: 20vw;
+            height: 8vh;
+            padding:5vmin;
+            border-radius: 15px;
+            margin: 1vmin;
+            position: relative;
+            img{
+
+                width: 5vw;
+            }
+            .pDiv{
+                padding-bottom: 5vh;
+                max-height: 8vh;
+                margin-left: 1vw;
+                .title{
+                    font-weight: bold;
+                    color: black;
+                }
+                p{
+                    color:rgba(143,144,144);
+                }
+            }
+            
+        }
+        .box:hover{
+            background-color:rgba(238,238,238) ;
+        }
+    }
+}
