@@ -1,0 +1,25 @@
+.SmallAd {
+    display: flex; 
+    flex-direction: row;
+    // background-color: rgb(174, 189, 174);
+    justify-content: space-between;
+    width: 35rem;
+
+    .leftAd {
+        padding: 1rem;  
+        border: solid black 1px;
+    }
+    .midAd {
+        padding: 1rem;  
+        border: solid black 1px;
+
+    }
+    .rightAd {
+        padding: 1rem;  
+        border: solid black 1px;
+
+    }
+}
+
+
+

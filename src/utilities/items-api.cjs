@@ -9,5 +9,8 @@ export function getAll() {
 
 // getting specific item by id
 export function getById(id) {
-  return sendRequest(`${BASE_URL}/${id}`);
+    return sendRequest(`${BASE_URL}/${id}`)
 }
+
+
+

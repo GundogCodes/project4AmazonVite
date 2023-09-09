@@ -1,25 +1,24 @@
 .createAccount {
     background-color: white;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 80vh;
 }
 
-//   .createAccountLogo {
-//     margin-top: 40px;
-//     margin-bottom: 25px;
-//     object-fit: contain;
-//     width: 200px;
-//     margin-right: auto;
-//     margin-left: auto;
-//     height: 50px;
-//   }
+  .createAccountLogo {
+    margin-top: 40px;
+    margin-bottom: 25px;
+    object-fit: contain;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 50px;
+  }
 
 .createAccount__container {
     width: 300px;
-    // height: fit-content;
-    height: 330px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -72,15 +71,35 @@
     color: #111111;
 }
 
-.createAccount__container > form > input[type="text"] {
+.createAccount__nameFields {
+    display: flex; 
+    gap: 10px; 
+}
+
+.createAccount__nameFields input {
+    height: 30px;
+    margin-bottom: 0px;
+    background-color: white;
+    flex: 1; 
+    border-radius: 10px;
+    border: 1.5px solid lightgray;
+    color: #111111;
+}
+
+  .createAccount__container__form__input__fname
+  {
     height: 30px;
     margin-bottom: 0px;
     background-color: white;
     width: 98%;
+    flex: 1;
+    gap: 10px;
     border-radius: 10px;
     border: 1.5px solid lightgray;
     color: #111111;
   }
+
+
 
 .createAccount__container>p {
     margin-top: 15px;
@@ -119,3 +138,4 @@
     display: flex;
     justify-content: center;
 }
+

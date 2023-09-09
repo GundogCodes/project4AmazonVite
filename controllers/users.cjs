@@ -52,7 +52,10 @@ async getUser(req, res, next) {
 
 async login(req, res, next) {
     try {
-        const user = await User.findOne({ email: req.body.email });
+        const user = await User.findOne({
+          $or: [{ email: req.body.loginValue }, { phoneNumber: req.body.loginValue }],
+         });
+        
         req.user = user;
       if (!user) throw Error();
       const match = await bcrypt.compare(req.body.password, user.password);
@@ -76,7 +79,7 @@ async login(req, res, next) {
         req.body,
         { new: true }
       );
-      updatedUser.save();
+
       res.json(updatedUser);
       // res.locals.data.user = updatedUser;
       // res.locals.data.token = req.user.token;

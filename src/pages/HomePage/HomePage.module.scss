@@ -2,10 +2,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.page-banner {
-    align-self: center;
+    background-color: rgba(63, 164, 130, 0.5);
+    margin-bottom: 30rem;
+    justify-content: space-evenly;
     height: 100%; 
-    width: 100%; 
+    width: 100%;
+
+
+
+    .pageBanner {
+        align-self: center;
+        height: 8rem; 
+        width: 14rem; 
+        margin-bottom: .5rem;
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    footer {
+      align-self: center;
+      justify-self: center;
+      left: 150px;
+    }
+
 }

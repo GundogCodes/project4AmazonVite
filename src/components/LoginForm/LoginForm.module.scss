@@ -1,9 +1,11 @@
 .login {
   background-color: white;
-  height: 100vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  top: 0;
+
 }
 
 .loginlogo {
@@ -17,13 +19,12 @@
 }
 
 .login__container {
+  margin-top:200px;
   width: 300px;
-  // height: fit-content;
-  height: 270px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  margin-bottom: 200px;
   border: 1px solid lightgray;
   padding: 20px;
 }
@@ -40,7 +41,6 @@
   font-family: Arial, sans-serif;
   font-size: 28px;
   font-weight: 500;
-  margin-bottom: 20px;
   margin: 0px 0px 10px;
   padding: 0px 0px 4px;
   height: 15px;
@@ -48,15 +48,11 @@
 
 .a-divider-normal {
   border: none;
-  /* Remove the default border */
   border-top: 5px solid rgb(43, 182, 182);
-  /* Add a 1px solid light gray line as the divider */
   margin-top: 20px;
-  /* Adjust the margin as needed to control the spacing above the divider */
   margin-bottom: 20px;
-  /* Adjust the margin as needed to control the spacing below the divider */
-}
 
+}
 
 .login__container>form>h5 {
   margin-bottom: 5px;
@@ -64,7 +60,6 @@
   font-family: Arial, sans-serif;
   font-size: 13px;
   margin-bottom: 5px;
-
 }
 
 .login__container>form>input {
@@ -74,9 +69,8 @@
   width: 98%;
   border-radius: 10px;
   border: 1.5px solid lightgray;
- color: #111111;
+  color: #111111;
 }
-
 
 .login__container>p {
   margin-top: 15px;
@@ -96,11 +90,13 @@
   border-radius: 8px;
   cursor: pointer;
   color: black;
+
 }
+
 
 .login__registerButton {
   border-radius: 2px;
-  width: 100%;
+  width: 200px;
   height: 30px;
   border: 1px solid;
   margin-top: 40px;
@@ -108,7 +104,9 @@
   color: #111111;
   border-radius: 5px;
   border-color: darkgray;
+  margin-right: 80vw;
 }
+
 
 .login__buttonContainer {
   margin-top: 10px;

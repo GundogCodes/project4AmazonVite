@@ -1,4 +1,5 @@
 .class {
+
     width: 100%;
     display: inline-block;
 }
@@ -12,9 +13,10 @@
     align-items: center;
     justify-content: space-evenly;
     top: 0;
-    height: 8vh;
+    height: 60px;
     background-color: rgba(34,41,53);
     width: 100vw;
+    left: 0;
     color:white;
     position: fixed;
         .titles{

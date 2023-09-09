@@ -90,7 +90,7 @@ export default function Footer(props){
                 <div class={styles.legal__links}>
                 <span>Made with <span class={styles.heart}>♥</span> remotely from Anywhere</span>
                 </div>
-            </div>
+                </div>
             </footer>
         </>
     )

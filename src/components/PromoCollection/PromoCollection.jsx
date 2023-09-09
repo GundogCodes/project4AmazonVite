@@ -1,17 +1,18 @@
-import styles from './PromoCollection.module.scss'; 
-import items from '../../../config/seed.cjs'
+// import styles from './PromoCollection.module.scss'; 
+// import * as itemsAPI from '../../utilities/items-api.cjs'
 
-export default function PromoCollection({ item }) {
-    const promoItems = item.map(i => 
-        <items
-            item={i}
-        />
-    )
+
+// export default function PromoCollection({ item }) {
+//     const promoCollection = item.map(i => 
+//         <items
+//             item={i}
+//         />
+//     )
     
-    return (
-        <div>
-
-        </div>
-    )
-}
+//     return (
+//         <div>
+//             {promoCollection}
+//         </div>
+//     )
+// }
 

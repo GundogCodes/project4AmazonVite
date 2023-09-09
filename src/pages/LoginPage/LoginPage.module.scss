@@ -1,0 +1,37 @@
+
+  .loginContainer {
+    height: 100vh;
+    background-color: white;
+
+    .pDiv {
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color:#111111;
+
+        .btl:hover {
+        color: rgb(127, 142, 255);
+        }
+    }
+
+    .lower {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        color: black;
+
+        button {
+            background-color: white;
+            color: black;
+            border-style: solid ;
+            border-radius: 15px;
+            padding: 5px;
+            margin-top: 30px;
+        }
+    }
+}
+
+  
+  

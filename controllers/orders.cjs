@@ -1,5 +1,6 @@
-const Order = require('../models/order.cjs');
-const User = require('../models/user.cjs');
+
+const Order = require('../models/order.cjs')
+const User = require('../models/user.cjs')
 
 module.exports = {
   cart,

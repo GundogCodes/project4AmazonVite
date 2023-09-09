@@ -9,47 +9,48 @@ import WishlistPage from '../pages/LoginPage/LoginPage';
 import CartPage from '../pages/CartPage/CartPage';
 
 const routes = [
-  {
-    Component: HomePage,
-    key: 'Home',
-    path: '/',
-  },
-  {
-    //Contains the signup as well
-    Component: LoginPage,
-    key: 'Login',
-    path: '/login',
-  },
-  {
-    Component: UserPage,
-    key: 'User',
-    path: '/user',
-  },
-  {
-    Component: SearchPage,
-    key: 'Search',
-    path: '/search',
-  },
-  {
-    Component: ItemPage,
-    key: 'Item',
-    path: '/item/:id',
-  },
-  {
-    Component: CategoryPage,
-    key: 'Category',
-    path: '/categories',
-  },
-  {
-    Component: OrderPage,
-    key: 'Order',
-    path: '/orders',
-  },
-  {
-    Component: CartPage,
-    key: 'Cart',
-    path: '/cart',
-  },
+
+	{
+		Component: HomePage,
+		key: 'Home',
+		path: '/'
+	},
+	{//Contains the signup as well
+		Component: LoginPage,
+		key: 'Login',
+		path: '/login'
+	},
+	{
+		Component: UserPage,
+		key: 'User',
+		path: '/user'
+	},
+	{
+		Component: SearchPage,
+		key: 'Search',
+		path: '/search'
+	},
+	{
+		Component: ItemPage,
+		key: 'Item',
+		path: '/item/:id'
+	},
+	{
+		Component: CategoryPage,
+		key: 'Category',
+		path: '/categories'
+	},
+	{
+		Component: OrderPage,
+		key: 'Order',
+		path: '/orders'
+	},
+	{
+		Component: CartPage,
+		key: 'Cart',
+		path: '/cart'
+	}
+
 ];
 
 export default routes;

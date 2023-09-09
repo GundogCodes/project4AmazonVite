@@ -1,89 +1,146 @@
 import styles from './EditUserPage.module.scss'
-import {useState} from 'react'
-export default function EditUserPage(){
-    
-    const [showInput, setShowInput] = useState(false)
-    function handleEditClick(){
-        setShowInput(!showInput)
-    }    
-    const user ={
-        name:"Gunish",
-        email:"gundog@gmail.com",
-        password:"Gun12345dog",
-        phoneNumber:'7805674567',
-        address:{
-            street:'123 st',
-            city:'Edmonton',
-            state:'Alberta',
-            zip:'6t94t0'
+import {useState, useRef, useEffect} from 'react'
+import { updateUserInfo } from '../../utilities/users-api.cjs'
+import LoginPage from '../LoginPage/LoginPage'
+import { getUser } from '../../utilities/users-service.cjs'
+import { useNavigate } from 'react-router-dom'
+// userId, newData
+export default function EditUserPage({user, setUser}){
+    const [initUser,setInitUser] = useState({
+        name:'',
+        email:'',
+        password:'',
+        phoneNumber: ''
+    })
+    const [updatedData, setUpdatedData] = useState(false)
+    const [editButtName, setEditButtName] = useState(false)
+    const [editButtEmail, setEditButtEmail] = useState(false)
+    const [editButtPassword, setEditButtPassword] = useState(false)
+    const [editButtPhoneNumber, setEditButtPhoneNumber] = useState(false)
+
+    const [userData, setUserData] = useState({
+        name:user.name,
+        email:user.email,
+        password:user.password || '',
+        phoneNumber:user.phoneNumber || ''
+    })
+
+
+    async function handleSubmit(e){
+        e.preventDefault()
+        try {
+            const updatedUser = await updateUserInfo(user._id,userData)
+            console.log('updatedUser ', updatedUser)
+            setUpdatedData(true)
+            setUserData(updatedUser)
+        } catch (error) {
+            
         }
     }
+    function handleChange(e){
+        setUserData({...userData,[e.target.name]:e.target.value})
+        console.log(userData)
+    }
+    
+    useEffect(()=>{
+        const currentUser =  getUser()
+        setInitUser(currentUser)
+    },[])
+    
+    function handleEditClick(e){
+        e.preventDefault()
+        const buttonName = e.target.name
+        console.log(e.target.name)
+        if(buttonName === 'name'){
+            setEditButtName(!editButtName)
+        } else if(buttonName ==='email'){
+            setEditButtEmail(!editButtEmail)
+        }else if(buttonName ==='password'){
+            setEditButtPassword(!editButtPassword)
+            
+        }else if(buttonName ==='phoneNumber'){
+            setEditButtPhoneNumber(!editButtPhoneNumber)
+            
+        }
+    }    
+
     return(
         <div className={styles.EditUserPage}>
-            <h1>Login & Security</h1>
-            <h2>Edit Info</h2>
-            <form >
-                <div className={styles.editDiv}>
-                    <div className={styles.heading}>
+            {user?
+            <>
+            <h1 className={styles.titles}>Login & Security</h1>
+            <form onSubmit={handleSubmit}>
+                <section>Username: <button name='name' onClick={handleEditClick} className={styles.editButt}>Edit</button>
+                    <div className={styles.sectionHeader}>
+                        {updatedData?
+                        <h4>{userData.name}</h4>
+                        :
+                        <h4>{initUser.name}</h4>
 
-                <label>Name:</label>
-                <label>{user.name}</label>
-                <button onClick={handleEditClick}>Edit</button>
-                
+                    }
                     </div>
-                {showInput?
-                <input type='text' name='name' required/>
-                :
-                <></>
-            }
-                </div>
-                
-                <div className={styles.editDiv}>
-                    <div className={styles.heading}>
+                    {editButtName?
+                    <input defaultValue={user.name} name='name' onChange={handleChange} type='text'/>
+                    :
+                    <></>
+                }
+                </section>
+                <section>Email:  <button name='email' onClick={handleEditClick} className={styles.editButt}>Edit</button>
+                    <div className={styles.sectionHeader}>
 
-                <label>E-mail:</label>
-                <label>{user.email}</label>
-                <button onClick={handleEditClick}>Edit</button>
-                
-                    </div>
-                {showInput?
-                <input type='text' name='email' required/>
-                :
-                <></>
-            }
-                </div>
-                
-                <div className={styles.editDiv}>
-                    <div className={styles.heading}>
+                    {updatedData?
+                        <h4>{userData.email}</h4>
+                        :
+                        <h4>{initUser.email}</h4>
 
-                <label>Password:</label>
-                <label>{user.password}</label>
-                <button onClick={handleEditClick}>Edit</button>
-                
+                    }
                     </div>
-                {showInput?
-                <input type='text' name='password' required/>
-                :
-                <></>
-            }
-                </div>
-                
-                <div className={styles.editDiv}>
-                    <div className={styles.heading}>
+                    {editButtEmail?
+                    <input defaultValue={user.email} name='email' onChange={handleChange} type='text'/>
+                    :
+                    <></>
+                }
+                </section>
+                <section>Password: <button name='password' onClick={handleEditClick} className={styles.editButt}>Edit</button>
+                    <div className={styles.sectionHeader}>
 
-                <label>Primary mobile phone:</label>
-                <label>{user.phoneNumber}</label>
-                <button onClick={handleEditClick}>Edit</button>
-                
+                    {updatedData?
+                        <h4>{userData.password} </h4>
+                        :
+                        <h4>{initUser.password} </h4>
+
+                    }
                     </div>
-                {showInput?
-                <input type='text' name='phoneNumber' required/>
-                :
-                <></>
-            }
-                </div>
-                <button type='submit'>Done</button>
+                    {editButtPassword?
+                    <input defaultValue={user.password} name='password' onChange={handleChange} type='text'/>
+                    :
+                    <></>
+                }
+                </section>
+                <section>Phone Number: <button name='phoneNumber' onClick={handleEditClick} className={styles.editButt}>Edit</button>
+                    <div className={styles.sectionHeader}>
+
+                    {updatedData?
+                        <h4>{userData.phoneNumber} </h4>
+                        :
+                        <h4>{initUser.phoneNumber} </h4>
+
+                    }
+                    </div>
+                    {editButtPhoneNumber?
+                    <input defaultValue={user.phoneNumber} name='phoneNumber' onChange={handleChange} type='text'/>
+                    :
+                    <></>
+                }
+                </section>
+                <button type='submit'>Submit Changes</button>
             </form>
+            </>
+            :
+            <>
+          <h1 className={styles.linkDiv}><Link to='/login'>Please Login to Continue...</Link></h1>
+            </>
+            }
         </div>
     )
 }

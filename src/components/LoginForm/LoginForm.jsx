@@ -1,47 +1,65 @@
+
 import { useState } from 'react';
-import * as usersService from '../../utilities/users-service.cjs';
+import * as usersService from '../../utilities/users-service.cjs'
 import styles from './LoginForm.module.scss';
-import { Link } from 'react-router-dom';
+
+import { Link,useNavigate} from 'react-router-dom';
+//import App from '../../App.jsx';
+
 import SignUpForm from '../SignUpForm/SignUpForm';
 
-export default function LoginForm({ setUser }) {
+
+export default function LoginForm({user, setUser }) {
+
     const [credentials, setCredentials] = useState({
-        email: '',
-        password: '',
+        loginValue: '',
+        password: ''
     });
     const [error, setError] = useState('');
     const [showSignUpForm, setShowSignUpForm] = useState(false);
+    const [isPhoneNumber, setIsPhoneNumber] = useState(false);
 
-    function handleChange(e) {
-        setCredentials({ ...credentials, [e.target.name]: e.target.value });
+    function handleChange(evt) {
+        setCredentials({ ...credentials, [evt.target.name]: evt.target.value });
+        setError('');
+    }
+    const navigate = useNavigate()
+    function handleClick() {
+        navigate('/');
+    }
+
+    function handleLoginValueChange(evt) {
+        const inputName = evt.target.name;
+        const inputValue = evt.target.value;
+
+        if (inputName === 'loginValue') {
+            // Check if the input value looks like a phone number or email
+            if (/^\d{10}$/.test(inputValue)) {
+                setIsPhoneNumber(true);
+            } else {
+                setIsPhoneNumber(false);
+            }
+        }
+        setCredentials({ ...credentials, [inputName]: inputValue });
         setError('');
     }
 
-    async function handleSubmit(e) {
-        e.preventDefault();
+    async function handleSubmit(evt) {
+        evt.preventDefault();
         try {
             const user = await usersService.login(credentials);
             setUser(user);
         } catch {
-            setError('Login Failed');
+            setError('Log In Failed - Try Again');
         }
+        
+       handleClick()
     }
-
-    // Function to show the SignUpForm when the "Create your Amazon Account" button is clicked
-    function handleSignUpClick() {
-        setShowSignUpForm(true);
-    }
+   
 
     return (
         <div className={styles.login}>
-            <Link to="/">
-                <img
-                    className={styles.loginlogo}
-                    src="/img/scamazon-logo.png"
-                    alt="Scamazon Logo"
-                />
-            </Link>
-
+         
             <div className={styles.login__container}>
                 {showSignUpForm ? (
                     <SignUpForm setUser={setUser} />
@@ -50,12 +68,12 @@ export default function LoginForm({ setUser }) {
                         <h1 className={styles.login__heading}>Sign in</h1>
 
                         <form onSubmit={handleSubmit}>
-                            <h5>Email or mobile phone number</h5>
+                            <h5>Mobile Phone number or Email</h5>
                             <input
                                 type="text"
-                                name="email"
-                                value={credentials.email}
-                                onChange={handleChange}
+                                name="loginValue"
+                                value={credentials.loginValue}
+                                onChange={handleLoginValueChange}
                                 required
                             />
 
@@ -68,7 +86,7 @@ export default function LoginForm({ setUser }) {
                                 required
                             />
                             <div className="login__buttonContainer">
-                                <button
+                                <button 
                                     type="submit"
                                     className={styles.login__signInButton}
                                 >
@@ -81,14 +99,7 @@ export default function LoginForm({ setUser }) {
                             By continuing, you agree to Scamazon's Conditions of Use and Privacy
                             Notice.
                         </p>
-                        <div className={styles.login}>
-                            <button
-                                className={styles.login__registerButton}
-                                onClick={handleSignUpClick}
-                            >
-                                Create your Scamazon Account
-                            </button>
-                        </div>
+
                     </>
                 )}
             </div>
