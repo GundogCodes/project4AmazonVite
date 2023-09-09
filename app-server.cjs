@@ -32,7 +32,8 @@ const ensureLoggedIn = require('./config/ensureLoggedIn.cjs');
 app.use('/api/users', require('./routes/user.cjs'));
 
 app.use('/api/items', require('./routes/item.cjs'));
-app.use('/api/orders',require('./routes/order.cjs'));
+app.use('/api/orders', require('./routes/order.cjs'));
+app.use('/api/wish-list/', require('./routes/wishList.cjs'));
 
 // catch all for wrong routes
 app.get('*', (req, res) => {

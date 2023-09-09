@@ -1,6 +1,6 @@
-const jwt = require('jsonwebtoken')
-const bcrypt = require('bcrypt')
-const User = require('../models/user.cjs')
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+const User = require('../models/user.cjs');
 
 //function to create a token using JWT
 function createJWT(user) {
@@ -10,7 +10,7 @@ function createJWT(user) {
 //checkToken function which responds with the expiry of the the token
 function checkToken(req, res) {
   console.log('req.user', req.user);
-  console.log('req.exp', req.exp)
+  console.log('req.exp', req.exp);
   res.json(req.exp);
 }
 
@@ -35,38 +35,37 @@ const dataController = {
       console.log('----res.locals.data.token-----', res.locals.data.token);
       next();
     } catch (error) {
-        console.log('Ya gatta database prablem son');
-        res.status(400).json({ error: error.message });
+      console.log('Ya gatta database prablem son');
+      res.status(400).json({ error: error.message });
     }
-},
+  },
 
-//R
-async getUser(req, res, next) {
+  //R
+  async getUser(req, res, next) {
     try {
-        const foundUser = await User.findOne({ _id: req.params.id });
-        res.json(foundUser);
+      const foundUser = await User.findOne({ _id: req.params.id });
+      res.json(foundUser);
     } catch (error) {
-        res.status(400).json({ error: error.message });
+      res.status(400).json({ error: error.message });
     }
-},
+  },
 
-async login(req, res, next) {
+  async login(req, res, next) {
     try {
-        const user = await User.findOne({
-          $or: [{ email: req.body.loginValue }, { phoneNumber: req.body.loginValue }],
-         });
-        
-        req.user = user;
+      const user = await User.findOne({ email: req.body.email });
+      req.user = user;
       if (!user) throw Error();
       const match = await bcrypt.compare(req.body.password, user.password);
       if (!match) throw new Error();
       res.locals.data.user = user;
-      res.locals.data.token = createJWT(user);
+      const token = createJWT(user);
+      res.locals.data.token = token;
+      console.log(token);
       console.log('----res.locals.data.user-----', res.locals.data.user);
       console.log('----res.locals.data.token-----', res.locals.data.token);
       next();
     } catch (error) {
-      res.status(400).json('Bad Credentials');
+      res.status(400).json(error);
     }
   },
 

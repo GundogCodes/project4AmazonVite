@@ -23,6 +23,7 @@ const Item = require('../models/item.cjs');
       price: 547.9,
       rating: 4.9,
       image: '/img/PS5.png',
+      countInventory: 25,
     },
     {
       name: 'Franklin Sports Official Size Football',
@@ -32,6 +33,7 @@ const Item = require('../models/item.cjs');
       price: 9.71,
       rating: 4.7,
       image: '/img/football.png',
+      countInventory: 15,
     },
     {
       name: 'Hanes Mens Originals Tri-blend Jersey Hoodie',
@@ -41,6 +43,7 @@ const Item = require('../models/item.cjs');
       price: 14,
       rating: 4.3,
       image: '/img/menshirt.png',
+      countInventory: 20,
     },
     {
       name: 'ZESICA Womens Dress',
@@ -50,6 +53,7 @@ const Item = require('../models/item.cjs');
       price: 49.99,
       rating: 4.3,
       image: '/img/womensdress.png',
+      countInventory: 5,
     },
   ]);
   console.log(items);

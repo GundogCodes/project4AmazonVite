@@ -2,22 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const itemSchema = require('./itemSchema.cjs');
 
-const lineItemSchema = new Schema(
-  {
-    qauntity: { type: Number, default: 1 },
-    item: itemSchema,
-  },
-  {
-    timestamps: true,
-    toJson: { virtuals: true },
-  }
-);
-
 const wishListSchema = new Schema(
   {
     user: { type: Schema.Types.ObjectId, ref: 'User' },
-    lineItems: [lineItemSchema],
-    isPaid: { type: Boolean, default: false },
+    items: [itemSchema],
   },
   {
     timestamps: true,
@@ -25,14 +13,10 @@ const wishListSchema = new Schema(
   }
 );
 
-/*******************
- ACTUAL WISHLIST MODEL
- *******************/
-
-wishListSchema.statics.getCart = function (userID) {
+wishListSchema.statics.getWishList = function (userID) {
   return this.findOneAndUpdate(
     //find the user id
-    { user: userID, isPaid: false },
+    { user: userID },
     //if the user id is not found, create a new order
     { user: userID },
     //return the new order
@@ -40,22 +24,18 @@ wishListSchema.statics.getCart = function (userID) {
   );
 };
 
-//this is the method to add an item to the cart
-wishListSchema.methods.addItemToCart = async function (itemID) {
-  const cart = this;
+//this is the method to add an item to the wishlist
+wishListSchema.methods.addItem = async function (itemID) {
+  const wishList = this;
   //checking if item is already in cart
-  const lineItem = cart.lineItems.find((lineItem) =>
-    lineItem.item._id.equals(itemID)
-  );
-  //if item is already in cart, increase quantity by 1
-  if (lineItem) {
-    lineItem.quantity += 1;
-  } else {
+  const item = wishList.items.find((item) => item._id.equals(itemID));
+
+  if (!item) {
     //if item is not in cart, add item to cart
     const item = await mongoose.model('Item').findById(itemID);
-    cart.lineItems.push({ item });
+    wishList.items.push(item);
   }
-  return cart.save();
+  return wishList.save();
 };
 
 //this method is to set the quantity of an item in the cart, it will add item if it doesn't already exist
@@ -75,4 +55,14 @@ wishListSchema.methods.setItemQty = function (itemID, newQty) {
   return cart.save();
 };
 
-module.exports = mongoose.model('Order', wishListSchema);
+wishListSchema.methods.removeItem = function (itemID) {
+  const wishList = this;
+
+  const item = wishList.items.find((item) => item._id.equals(itemID));
+  item.deleteOne();
+
+  return wishList.save();
+};
+
+const WishList = mongoose.model('WishList', wishListSchema);
+module.exports = WishList;

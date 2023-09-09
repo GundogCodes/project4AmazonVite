@@ -10,7 +10,14 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "db:mac": "brew services start mongodb-community@7.0",
+<<<<<<< HEAD
     "db:stop": "brew services stop mongodb-community@7.0"
+=======
+    "db:stop": "brew services stop mongodb-community@7.0",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "sass:build": "sass --no-source-map scss:css"
+>>>>>>> dev
   },
   "dependencies": {
     "bcrypt": "^5.1.1",

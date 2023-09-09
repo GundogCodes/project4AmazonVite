@@ -5,17 +5,37 @@ import styles from './ItemPage.module.scss';
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap';
 import Ratings from '../../components/Ratings/Ratings';
 import { addToCart, getCart } from '../../utilities/orders-api.cjs';
+import { getWishList, addToWishList } from '../../utilities/wishList-api.cjs';
 
 export default function ItemPage() {
   const { id } = useParams();
   const [item, setItem] = useState(null);
   const [cart, setCart] = useState(null);
+  const [wishList, setWishList] = useState(null);
 
-  console.log('test Cart:', cart);
+  console.log('krazy kart time:', cart);
   async function handleAddToCart() {
     const updatedCart = await addToCart(id);
     setCart(updatedCart);
   }
+
+  console.log('test wishList:', wishList);
+  async function handleAddToWishList() {
+    const updatedWishList = await addToWishList(id);
+    setWishList(updatedWishList);
+  }
+
+  // Get wishList data
+  useEffect(() => {
+    (async () => {
+      try {
+        const wishList = await getWishList();
+        setWishList(wishList);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, []);
 
   // Get the cart data
   useEffect(() => {
@@ -45,7 +65,7 @@ export default function ItemPage() {
     <>
       {item ? (
         <>
-          <Row>
+          <Row className={styles.row}>
             <Col md={5}>
               <Image
                 src={item.image}
@@ -78,18 +98,31 @@ export default function ItemPage() {
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
-                    <Button
+                    <Row>
+                      <Col>Status:</Col>
+                      <Col>
+                        {item.countInventory > 0 ? 'In Stock' : 'Out Of Stock'}
+                      </Col>
+                    </Row>
+                  </ListGroup.Item>
+
+                  <ListGroup.Item>
+                    <button
                       onClick={handleAddToCart}
-                      className="btn-block"
+                      className={styles.primary}
                       type="button"
                     >
-                      Add To Cart
-                    </Button>
+                      Add to Cart
+                    </button>
                   </ListGroup.Item>
                   <ListGroup.Item>
-                    <Button className="btn-block" type="button">
-                      Add To Wishlist
-                    </Button>
+                    <button
+                      onClick={handleAddToWishList}
+                      className={styles.secondary}
+                      type="button"
+                    >
+                      Add to Wishlist
+                    </button>
                   </ListGroup.Item>
                 </ListGroup>
               </Card>
