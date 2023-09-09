@@ -1,7 +1,22 @@
-export default function CategoryPage(){
+import { useState } from 'react'
+import Category from "../../../models/category.cjs"
+
+
+export default function CategoryPage({ categories }){
+
+    const categories = categories.map((category) => {
+        return (
+            <div>
+                <h1>{category.name}</h1>
+            </div>
+        )
+    })
+
+
+
     return(
         <>
-        CategoryPage
+            <h1></h1>
         </>
     )
 }

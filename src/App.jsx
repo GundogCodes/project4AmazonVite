@@ -19,57 +19,44 @@ import EditUserPage from './pages/EditUserPage/EditUserPage';
 import { getUser } from '../src/utilities/users-service.cjs';
 
 import LogOut from './components/LogOut/LogOut';
+import Footer from './components/Footer/Footer';
+import CategoryBar from './components/CategoryBar/CategoryBar';
 
 function App() {
   const [user, setUser] = useState(getUser());
 
   return (
-    <>
-      <NavBar routes={routes} />
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/user" element={<UserPage user={user} setUser={user} />} />
-        <Route path="/search" element={<SearchPage />} />
-        <Route path="/item/:id" element={<ItemPage />} />
-        <Route path="/categories" element={<CategoryPage />} />
-        <Route path="/orders" element={<OrderPage />} />
-        <Route path="/address" element={<AddressFormPage />} />
-        <Route path="/payments" element={<YourPaymentPage />} />
-        <Route path="/edit" element={<EditUserPage />} />
-        <Route
-          path="/login"
-          element={<LoginPage user={user} setUser={setUser} />}
-        />
-        <Route
-          path="/wishlist"
-          element={<WishlistPage user={user} setUser={setUser} />}
-        />
-      </Routes>
-      <LogOut user={user} setUser={setUser} />
-      <body>
-      <CategoryBar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
-      <NavBar routes={routes} />
-          <Routes>
-            <Route path="/" element={<HomePage />}/>
-            <Route path="/login" element={<LoginPage />}/>
-            <Route path="/user/:id" element={<UserPage />}/>
-            <Route path="/search" element={<SearchPage />}/>
-            <Route path="/item/:id" element={<ItemPage />}/>
-            <Route path="/categories" element={<CategoryPage />}/>
-            <Route path="/orders" element={<OrderPage />}/>
-            <Route path="/wishlist" element={<WishlistPage />}/>
-          </Routes>
-        <div className='sidebar'>
-          <h2> test</h2>
-        </div>
-        <div>
-          <h2>empty</h2>
-        </div>
-      </body>
+      <div className='App' id="outer-container">
+        <CategoryBar pageWrapId="page-wrap" outerContainerId="outer-container" />
+          <div id="page-wrap">
+            <NavBar routes={routes} />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/user" element={<UserPage user={user} setUser={user} />} />
+              <Route path="/search" element={<SearchPage />} />
+              <Route path="/item/:id" element={<ItemPage />} />
+              <Route path="/categories" element={<CategoryPage />} />
+              <Route path="/orders" element={<OrderPage />} />
+              <Route path="/address" element={<AddressFormPage />} />
+              <Route path="/payments" element={<YourPaymentPage />} />
+              <Route path="/edit" element={<EditUserPage />} />
+              <Route
+                path="/login"
+                element={<LoginPage user={user} setUser={setUser} />}
+              />
+              <Route
+                path="/wishlist"
+                element={<WishlistPage user={user} setUser={setUser} />}
+              />
+            </Routes>
+            <LogOut user={user} setUser={setUser} />
 
-      <Footer />
-    </>
+            <Footer />
+
+          </div>
+      </div>
+      
   );
 }
 

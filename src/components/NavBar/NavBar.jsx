@@ -4,7 +4,6 @@ import CategoryBar from '../CategoryBar/CategoryBar'
 
 export default function NavBar(props){
     return(
-      <div className="container">
         <nav className={styles.NavBarDiv}>
           {props.routes.map(({key,path})=>(
             <div className={styles.titles}>
@@ -12,6 +11,5 @@ export default function NavBar(props){
             </div>
           ))}
         </nav>
-      </div>
     )
 }
