@@ -8,9 +8,6 @@ const Item = require('../models/item.cjs');
   await Category.deleteMany({});
   const categories = await Category.create([
     { name: 'Electronics', sortOrder: 10 },
-    { name: 'Sporting Goods', sortOrder: 20 },
-    { name: 'Mens Clothing', sortOrder: 30 },
-    { name: 'Womens Clothing', sortOrder: 40 },
   ]);
 
   await Item.deleteMany({});
@@ -20,40 +17,100 @@ const Item = require('../models/item.cjs');
       description:
         'The PS5 console unleashes new gaming possibilities that you never anticipated. Experience lightning fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers, and 3D Audio, and an all-new generation of incredible PlayStation games.',
       category: categories[0],
-      price: 547.9,
+      price: 548,
       rating: 4.9,
       image: '/img/PS5.png',
       countInventory: 25,
     },
     {
-      name: 'Franklin Sports Official Size Football',
+      name: 'SAMSUNG 75-Inch Class Crystal UHD 4K CU8000',
       description:
-        'Get outdoors for football fun with the Franklin Sports Official Size 1000 Outdoor Football! This official size football is perfect for all players to grip and throw the ball with ease. Constructed with a durable, synthetic leather surface, these footballs are built to stand up to all-weather play year after year. The deep-pebble surface increases grip so players can easily pass and catch the football even in the rain. This outdoor football is also designed with hand sewn laces for a professional feel that will help all players throw their best spirals. Available in single footballs and (12) football bulk packs, you can find official size outdoor footballs for you and your whole flag football team! The bulk football packs also come with an air pump with an inflation needle included, so you can keep your footballs in perfect condition. This football season, get out in the yard with the best outdoor football equipment and grab yourself a Franklin Sports Official Size 1000 Outdoor Football today!',
-      category: categories[1],
-      price: 9.71,
+        'The SAMSUNG 75-Inch Class Crystal UHD 4K CU8000 Series  smart tv  features PurColor Object Tracking, Sound Lite, Q-Symphony, Motion Xcelerator, Ultra Slim, Solar Remote and Alexa Built-in',
+      category: categories[0],
+      price: 947.99,
+      rating: 4.2,
+      image: '/img/TV.png',
+      countInventory: 9,
+    },
+    {
+      name: 'Apple AirPods Pro (2nd Generation) Wireless Earbuds',
+      description:
+        'The Apple-designed H2 chip pushes advanced audio performance even further, resulting in smarter noise cancellation and more immersive sound. The low-distortion, custom-built driver delivers crisp, clear high notes and deep, rich bass in stunning definition. So every sound is more vivid than ever.',
+      category: categories[0],
+      price: 199,
       rating: 4.7,
-      image: '/img/football.png',
-      countInventory: 15,
+      image: '/img/AirPods.png',
+      countInventory: 50,
     },
     {
-      name: 'Hanes Mens Originals Tri-blend Jersey Hoodie',
+      name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
       description:
-        'Look good and feel good in these distinctive mens t-shirt hoodies from our Hanes® Originals line. Spun with recycled polyester, these Henley-style hooded t-shirts are the perfect marriage between a long-sleeve tee and a classic hoodie. This mens long sleeve tee has a 3-button Henley placket, roomy front kanga pocket, and knotted twill drawcords for an authentic Hanes look youll love. The tri-blend fabric formula is buttery soft, lightweight, and made for layering under a jacket when the weather is cool. Even better when you want to wear a hoodie, but its t-shirt weather - this is the one for you!',
-      category: categories[2],
-      price: 14,
-      rating: 4.3,
-      image: '/img/menshirt.png',
-      countInventory: 20,
+        'Smooth, responsive Super Retina display with ProMotion. Huge camera system upgrade for dramatic new possibilities. Exceptional durability. The ultra fast A15 Bionic chip. And breakthrough battery life.',
+      category: categories[0],
+      price: 1199,
+      rating: 4,
+      image: '/img/iphone.png',
+      countInventory: 100,
     },
     {
-      name: 'ZESICA Womens Dress',
+      name: 'Introducing Echo Pop | Full sound compact smart speaker with Alexa',
       description:
-        'ZESICA Summer Bohemian Floral Crew Neck Smocked High Waist Beach Long Maxi Dress',
-      category: categories[3],
-      price: 49.99,
-      rating: 4.3,
-      image: '/img/womensdress.png',
-      countInventory: 5,
+        'This compact smart speaker with Alexa features full sound thats great for bedrooms and small spaces. Small enough to blend in and mighty enough to stand out.',
+      category: categories[0],
+      price: 39.99,
+      rating: 4.6,
+      image: '/img/echodot.png',
+      countInventory: 25,
+    },
+    {
+      name: 'Ring Video Doorbell 3 ',
+      description:
+        '1080p HD video doorbell with enhanced features that let you see, hear, and speak to anyone from your phone, tablet, or PC.',
+      category: categories[0],
+      price: 149.99,
+      rating: 4.6,
+      image: '/img/ring.png',
+      countInventory: 75,
+    },
+    {
+      name: 'Sonos Arc - The Premium Smart Soundbar',
+      description:
+        'All-new Sonos Arc - Bring all your entertainment to life with the brilliantly realistic sound of Arc, featuring Dolby Atmos. Enjoy control with your TV remote, voice, the Sonos app, Apple AirPlay 2, and more.',
+      category: categories[0],
+      price: 899,
+      rating: 4.6,
+      image: '/img/sonos.png',
+      countInventory: 7,
+    },
+    {
+      name: 'Apple 2023 MacBook Pro Laptop M2 Pro',
+      description:
+        'Take on demanding projects with the M2 Pro or M2 Max chip. M2 Pro has up to 12 CPU cores, up to 19 GPU cores, and up to 32GB unified memory. M2 Max has 12 CPU cores, up to 38 GPU cores, and up to 96GB unified memory.',
+      category: categories[0],
+      price: 2299,
+      rating: 4.8,
+      image: '/img/macbook.png',
+      countInventory: 100,
+    },
+    {
+      name: 'Meta Quest 2 — Advanced All-In-One Virtual Reality Headset — 256 GB',
+      description:
+        'Meta Quest is for ages 13+. Certain apps, games and experiences may be suitable for a more mature audience. Keep your experience smooth and seamless, even as high speed action unfolds around you with a super-fast processor and high-resolution display.',
+      category: categories[0],
+      price: 349,
+      rating: 4.7,
+      image: '/img/oculus.png',
+      countInventory: 100,
+    },
+    {
+      name: 'Amazon Fire TV Stick 4K Max with 2-Year Protection Plan',
+      description:
+        'Our first-ever streaming stick with Wi-Fi 6 support means reduced congestion for smoother, more fluid streaming and gaming across multiple Wi-Fi 6-connected devices.',
+      category: categories[0],
+      price: 32.48,
+      rating: 4.7,
+      image: '/img/firestick.png',
+      countInventory: 25,
     },
   ]);
   console.log(items);
