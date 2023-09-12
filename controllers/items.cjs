@@ -7,7 +7,7 @@ module.exports = {
 
 async function index(req, res) {
   try {
-    const items = await Item.find({});
+    const items = await Item.find({}).populate('category');
     items.sort((a, b) => a.category.sortOrder - b.category.sortOrder);
     res.status(200).json(items);
   } catch (e) {

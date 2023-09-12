@@ -100,10 +100,12 @@ orderSchema.methods.addItemToCart = async function (itemID) {
 //this method is to set the quantity of an item in the cart, it will add item if it doesn't already exist
 orderSchema.methods.setItemQty = function (itemID, newQty) {
   const cart = this;
+
   //checking if item is already in cart
   const lineItem = cart.lineItems.find((lineItem) =>
     lineItem.item._id.equals(itemID)
   );
+
   if (lineItem && newQty <= 0) {
     //if item is already in cart and new quantity is less than or equal to 0, remove item from cart
     lineItem.deleteOne();

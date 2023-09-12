@@ -1,0 +1,21 @@
+.PromoCollection    { 
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border: outset pink 5px;
+    background-color: rgb(205, 49, 176);
+    color: white;
+    font-size: 24px;
+    border-radius: 10%;
+
+    p {
+        text-align: center;
+    }
+
+.promCollImg {
+    height: 16rem; 
+    width: 36rem;
+    border-radius: 10%;
+}
+
+}

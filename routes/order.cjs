@@ -22,7 +22,7 @@ router.post('/cart/items/:id', ordersCtrl.addToCart);
 router.post('/cart/checkout', ordersCtrl.checkout);
 
 // PUT /api/orders/cart/qty
-//router.put('/cart/qty', ordersCtrl.setItemQtyInCart);
+router.put('/cart/qty', ordersCtrl.setItemQtyInCart);
 
 module.exports = router;
 

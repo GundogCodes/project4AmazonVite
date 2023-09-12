@@ -3,24 +3,24 @@ import styles from './Footer.module.scss'
 export default function Footer(props){
     return(
         <>
-            <footer class={styles.footer}>
-            <div class={styles.footer__addr}>
-                <h1 class={styles.footer__logo}>Something</h1>
+            <footer className={styles.footer}>
+            <div className={styles.footer__addr}>
+                <h1 className={styles.footer__logo}>Something</h1>
                     
                 <h2>Contact</h2>
                 
                 <address>
                 5534 Somewhere In. The World 22193-10212<br/>
                     
-                <a class={styles.footer__btn} href="mailto:example@gmail.com">Email Us</a>
+                <a className={styles.footer__btn} href="mailto:example@gmail.com">Email Us</a>
                 </address>
             </div>
             
-            <ul class={styles.footer__nav}>
-                <li class={styles.nav__item}>
-                <h2 class={styles.nav__title}>Media</h2>
+            <ul className={styles.footer__nav}>
+                <li className={styles.nav__item}>
+                <h2 className={styles.nav__title}>Media</h2>
 
-                <ul class={styles.nav__ul}>
+                <ul className={styles.nav__ul}>
                     <li>
                     <a href="#">Online</a>
                     </li>
@@ -35,10 +35,10 @@ export default function Footer(props){
                 </ul>
                 </li>
                 
-                <li class="nav__item nav__item--extra">
-                <h2 class={styles.nav__title}>Technology</h2>
+                <li className="nav__item nav__item--extra">
+                <h2 className={styles.nav__title}>Technology</h2>
                 
-                <ul class={styles.nav__ul}>
+                <ul className={styles.nav__ul}>
                     <li>
                     <a href="#">Hardware Design</a>
                     </li>
@@ -65,10 +65,10 @@ export default function Footer(props){
                 </ul>
                 </li>
                 
-                <li class={styles.nav__item}>
-                <h2 class={styles.nav__title}>Legal</h2>
+                <li className={styles.nav__item}>
+                <h2 className={styles.nav__title}>Legal</h2>
                 
-                <ul class={styles.nav__ul}>
+                <ul className={styles.nav__ul}>
                     <li>
                     <a href="#">Privacy Policy</a>
                     </li>
@@ -84,11 +84,11 @@ export default function Footer(props){
                 </li>
             </ul>
             
-            <div class={styles.legal}>
+            <div className={styles.legal}>
                 <p>&copy; 20Something. All rights reserved.</p>
                 
-                <div class={styles.legal__links}>
-                <span>Made with <span class={styles.heart}>♥</span> remotely from Anywhere</span>
+                <div className={styles.legal__links}>
+                <span>Made with <span className={styles.heart}>♥</span> remotely from Anywhere</span>
                 </div>
                 </div>
             </footer>

@@ -1,7 +1,8 @@
 <img src= './public/img/scamazon.png'/>
 
 # SCAMAZON
- 
+### "Delivering imaginary solutions to your imaginary needs." - Scamazon CEO, Melon Husk
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -9,14 +10,14 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#Purpose">Purpose</a></li>
-        <li><a href="#Usage">Usage</a></li>
+        <li><a href="#Meet-The-Team">Meet our team</a></li>
         <li><a href="#Portfolio">Portfolio</a></li>
       </ul>
     </li>
     <li>
       <a href="#placeholder">placeholder</a>
       <ul>
-        <li><a href="#placeholder">placeholder</a></li>
+        <li><a href="#API">API</a></li>
         <li><a href="#placeholder">placeholder</a></li>
         <li><a href="#placeholder">placeholder</a></li>
       </ul>
@@ -27,72 +28,7 @@
   </ol>
 </details>
 
-* [Usage]
 
-* [Installation]
-
-* [Purpose]
-
-* [Wireframes]
-#### Landing Page
-<img src= './public/img/scamazon-landing-page-correct.png'/>
-
-#### Items List
-
-<img src= './public/img/Items-Page.png'/>
-
-#### Item Detail
-
-<img src= './public/img/Item-Detail.png'/>
-
-#### Cart
-
-<img src= './public/img/Cart.png'/>
-
-#### My Orders
- 
-<img src= './public/img/My-Orders.png'/>
-
-#### Wishlist
-
-<img src= './public/img/Wishlist.png'/>
-
-
-#### Checkout
-
-<img src= './public/img/Checkout.png'/>
-
-#### Login/Sign Up
-
-<img src= './public/img/Login.png'/>
-
-<img src= './public/img/Sign-Up.png'/>
-
-#### My Account
-
-<img src= './public/img/My-Account.png'/>
-
-#### Contact
-
-<img src= './public/img/Contact-Us.png'/>
-
-#### Misc
-
-<img src= './public/img/About.png'/>
-
-<img src= './public/img/Careers.png'/>
-
-<img src= './public/img/Corporate-Values.png'/>
-
-<img src= './public/img/History.png'/>
-
-<img src= './public/img/Job-Opening.png'/>
-
-<img src= './public/img/Mission.png'/>
-
-<img src= './public/img/Testimonies.png'/>
-
-<img src= './public/img/Working-for-Scamazon.png'/>
 
 
 * [ERD]
@@ -119,18 +55,62 @@
 
 Our team created a MERN stack web application similar in style and function to multinational e-commerce platform, Amazon, for General Assembly coding bootcamp. 
 
-### Usage
+### Meet The Team
 
 
-<details id="Portfolio">
+<details id ="Portfolio" >
   <summary>Portfolio</summary>
   
- ## Portfolio
+  ## Portfolio
+  
   1. Wireframed 
-  <img src= './public/img/scamazon-landing-page.png'/>
-  2. Erd
+
+  ##### Landing Page
+  ![Landing Page](./public/img/scamazon-landing-page-correct.png)
+
+  ##### Items List
+  ![Items List](./public/img/Items-Page.png)
+
+  ##### Item Detail
+  ![Item Detail](./public/img/Item-Detail.png)
+
+  ##### Cart
+  ![Cart](./public/img/Cart.png)
+
+  ##### My Orders
+  ![My Orders](./public/img/My-Orders.png)
+
+  ##### Wishlist
+  ![Wishlist](./public/img/Wishlist.png)
+
+  ##### Checkout
+  ![Checkout](./public/img/Checkout.png)
+
+  ##### Login/Sign Up
+  ![Login](./public/img/Login.png)
+  ![Sign Up](./public/img/Sign-Up.png)
+
+  ##### My Account
+  ![My Account](./public/img/My-Account.png)
+
+  ##### Contact
+  ![Contact](./public/img/Contact-Us.png)
+
+  #### Misc
+  ![About](./public/img/About.png)
+  ![Career](./public/img/Careers.png)
+  ![CorpV](./public/img/Corporate-Values.png)
+  ![History](./public/img/History.png)
+  ![Jobopen](./public/img/Job-Openings.png)
+  ![Mission](./public/img/Mission.png)
+  <img src= './public/img/Testimonies.png'/>
+
+  <img src= './public/img/Working-for-Scamazon.png'/>
+  
+
   3. Trello
 </details>
+
 
 
 ### Trello Board
@@ -145,9 +125,9 @@ Our team created a MERN stack web application similar in style and function to m
 | [![JWT][JWT]][JWT-url] | [![DigitalOcean][DigitalOcean]][DigitalOcean-url] | [![Gulp][Gulp]][Gulp-url] | [![Babel][Babel]][Babel-url] | [![Nodemon][Nodemon]][Nodemon-url] |
 | [![Webpack][Webpack]][Webpack-url] | [![DigitalOcean][DigitalOcean]][DigitalOcean-url] | [![Gulp][Gulp]][Gulp-url] | [![Babel][Babel]][Babel-url] | [![Nodemon][Nodemon]][Nodemon-url] |
 
-### API 
 
-### Routing
+<details id ="API" >
+  <summary>API</summary>
 
 - USER ROUTES
 
@@ -156,6 +136,29 @@ Our team created a MERN stack web application similar in style and function to m
 | POST            | /user            | Creates user      |
 | POST            | /user/login      | Logs in user      |
 | POST            | /user/logout/:id | Logs out user     |
+| DELETE          | /user/:id        | Delete user       |
+| PUT             | /user/:id        | Update user       |
+| GET             | /user/:id        | Get user info     |
+
+
+
+- ORDER ROUTES
+
+| **HTTP Method** | **End Point**    |    **Action**     |
+| :-------------- | :--------------: | ----------------: |
+| GET             | /orders/cart            | get cart info       |
+| GET             | /orders/history         | orders history      |
+| POST            | /orders/cart/items/:id  | add item to cart    |
+| POST            | /orders/checkout        | checkout cart       |
+
+- ITEMS ROUTES
+
+| **HTTP Method** | **End Point**    |    **Action**     |
+| :-------------- | :--------------: | ----------------: |
+| GET             | /items           | get items info    |
+| GET             | /items/:id       | get one item info |
+
+</details>
 
 ### Testing
 

@@ -8,6 +8,7 @@ import OrderPage from '../pages/LoginPage/LoginPage';
 import WishlistPage from '../pages/LoginPage/LoginPage';
 import CartPage from '../pages/CartPage/CartPage';
 
+
 const routes = [
 
 	{

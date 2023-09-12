@@ -1,0 +1,78 @@
+.SearchBar {
+    display: flex;
+    flex-direction: column;
+
+
+    .searchBarDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 800px;
+        height: 75px;
+
+
+
+        input {
+
+            width: 800px;
+            border-top-left-radius: 15px;
+            height: 50px;
+
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            width: 50px;
+            height: 50px;
+            background-image: url(https://cdn-icons-png.flaticon.com/128/2989/2989907.png);
+            background-size: 44px;
+            padding: 20px;
+            background-color: rgba(244, 192, 118);
+        }
+        button:hover{
+            background-color: adjust-hue($color: #ffab59, $degrees: 0);
+        }
+    }
+
+    .searchResultsList {
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        
+        background-color: white;
+        width: 800px;
+        position: absolute;
+        top: 60px;
+
+        width: 750px;
+        max-height: 200px;
+        overflow-y:scroll;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        list-style-type: none;
+        padding-left: 10px;
+        
+
+        .searchResult {
+
+            overflow-y: visible;
+
+            color: black;
+            width: 800px;
+
+        }
+        li:hover{
+            background-color: rgba(238,238,238);
+            font-weight: bold;
+        }
+
+
+
+    }
+
+}

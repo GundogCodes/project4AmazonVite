@@ -9,11 +9,14 @@
   button{
     width: 100px;
     height: 3vmin;
-    background-color: yellow;
+    background-color: rgba(244,192,118);
     border-radius: 15px;
     bottom: 0;
     position: fixed;
     color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
   }
 }

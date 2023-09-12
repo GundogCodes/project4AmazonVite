@@ -19,6 +19,11 @@
   padding-bottom: 6px;
   font-size: 13px;
   font-weight: 500;
+  color: black;
+}
+
+.primary:hover {
+  background-color: rgb(240, 204, 68);
 }
 
 .secondary {
@@ -30,4 +35,9 @@
   padding-bottom: 6px;
   font-size: 13px;
   font-weight: 500;
+  color: black;
+}
+
+.secondary:hover {
+  background-color: rgb(235, 143, 52);
 }

@@ -14,13 +14,14 @@ export function addToCart(itemId) {
 
 // updating item quantity in cart
 export function setItemQtyInCart(itemId, quantity) {
-  return sendRequest(`${BASE_URL}/cart/qty`, 'PUT', { itemId, quantity });
+//line18 is what is causing the error
+  return sendRequest(`${BASE_URL}/cart/qty`, 'PUT', { item: itemId, quantity: quantity });
 }
 
 // making isPaid to true
 export function checkout() {
-  return sendRequest(`${BASE_URL}/cart/checkout`, 'PUT');
-}
+  return sendRequest(`${BASE_URL}/cart/checkout`, 'Post');}
+
 
 // returning paid orders back to the user
 export function getOrderHistory() {

@@ -5,7 +5,7 @@ import LoginPage from '../LoginPage/LoginPage'
 import {signUp,login, logOut, getUser} from '../../utilities/users-service.cjs'
 export default function UserPage({user,setUser}){
    
-    console.log('user: ',user)
+    //console.log('user(from userPage) : ',user)
     
     return(
         
