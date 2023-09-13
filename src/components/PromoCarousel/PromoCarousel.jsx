@@ -1,6 +1,7 @@
 import styles from './PromoCarousel.module.scss'; 
 import { useState } from 'react'
 import { Carousel, Image } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 
 
 export default function PromoCarousel({promotionItems}) {
@@ -27,36 +28,47 @@ export default function PromoCarousel({promotionItems}) {
    <>
     <Carousel activeIndex={styles.index} onSelect={handleSelect} className={styles.Carousel}>
       <Carousel.Item className={styles.CarouselItem} >
-        <Image
+      <Link to={`item/${promotionItems[0][51]._id}`} > <Image 
           className="d-block w-100"
-          src='../../public/img/PS5.png'
-          />
+          src='./img/rey.png'
+          /> </Link>
           <Carousel.Caption className={styles.caption}>
-          <h3 className={styles.cardTitle}> {carouselItems[0].name} </h3>
-          <p className={styles.itemDesc}>Comes with instructions on how to fix it</p> 
-          <a href= {`item/${promotionItems[0]._id}`} className={styles.sm} > Buy Now! </a>
+          <h3 className={styles.cardTitle}> {carouselItems[0][51].name} </h3>
+          <p className={styles.itemDesc}>{promotionItems[0][51].description}</p> 
+          {/* <a href= {`item/${promotionItems[0][51]._id}`} className={styles.sm} > Buy Now! </a> */}
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item className={styles.CarouselItem} >
-        <Image
+      <Link to={`item/${promotionItems[0][60]._id}`} > <Image 
           className="d-block w-100"
-          src='../../public/img/animal-puppet.png'
-          />
+          src='../../img/cannon.png'
+          /> </Link>
         <Carousel.Caption className={styles.caption}>
-          <h3 className={styles.cardTitle}>{carouselItems[4].name}</h3>
-          <p className={styles.itemDesc}>AHHHHHHHH beat Dave Grohl in drum battle!!</p>
-          <a href= {`item/${promotionItems[6]._id}`} className={styles.sm} > Buy Now! </a>
+          <h3 className={styles.cardTitle}>{carouselItems[0][60].name}</h3>
+          <p className={styles.itemDesc}>{promotionItems[0][60].description}</p>
+          {/* <a href= {`item/${promotionItems[4]._id}`} className={styles.sm} > Buy Now! </a> */}
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item className={styles.CarouselItem} >
-        <Image
+      <Link to={`item/${promotionItems[0][48]._id}`} > <Image 
           className="d-block w-100"
-          src='../../public/img/football.png'
-          />
+          src='./img/animal.png'
+          /> </Link>
         <Carousel.Caption className={styles.caption}>
-          <h3 className={styles.cardTitle}>{carouselItems[1].name}</h3>
-          <p className={styles.itemDesc}>Tom Brady Signed Footballs- $.01</p>
-          <a href= {`item/${promotionItems[1]._id}`} className={styles.sm} > Buy Now! </a>
+          <h3 className={styles.cardTitle}>{carouselItems[0][48].name}</h3>
+          <p className={styles.itemDesc}>{promotionItems[0][48].description}</p>
+          {/* <a href= {`item/${promotionItems[0][48]._id}`} className={styles.sm} > Buy Now! </a> */}
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item className={styles.CarouselItem} >
+      <Link to={`item/${promotionItems[0][35]._id}`} > <Image 
+          className="d-block w-100"
+          src='./img/MobyClick.png'
+          /> </Link>
+        <Carousel.Caption className={styles.caption}>
+          <h3 className={styles.cardTitle}>{carouselItems[0][35].name}</h3>
+          <p className={styles.itemDesc}>{promotionItems[0][35].description}</p>
+          {/* <a href= {`item/${promotionItems[0][48]._id}`} className={styles.sm} > Buy Now! </a> */}
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

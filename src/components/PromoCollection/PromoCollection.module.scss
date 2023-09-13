@@ -2,20 +2,37 @@
     display: flex;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    border: outset pink 5px;
-    background-color: rgb(205, 49, 176);
-    color: white;
     font-size: 24px;
     border-radius: 10%;
+    margin: 3rem;
+    
+    .collectionBanner1 {
+        border: outset pink 5px;
+        background-color: rgb(205, 49, 176);
+        color: white;
+        border-radius: 10%;
+        margin-right: 1.5rem;
+    }
+
+    .collectionBanner2 {
+        border: outset grey 5px; 
+        background-color: rgb(90, 198, 90);
+        color: black;
+        border-radius: 10%;
+        margin-left: 1.5rem;
+
+    }
 
     p {
         text-align: center;
     }
 
-.promCollImg {
+    .promCollImg {
     height: 16rem; 
-    width: 36rem;
+    width: fit-content;
     border-radius: 10%;
-}
+    }
+
+
 
 }

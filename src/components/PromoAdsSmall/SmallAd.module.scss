@@ -5,34 +5,118 @@
     width: 35rem;
     margin-top: 2rem;
     
-    .smAdImg {
-        height: 10rem;
-        width: 7.5rem;
+    
+    .leftCol, .midCol, .rightCol {
+
+        .smAdImg {
+            height: 11rem;
+            width: 8.5rem;
+            border: outset grey 3px; 
+            border-radius: 15%;
+            margin: 5px;
+
+        }
+
+        .topRow {
+            padding: 1rem;  
+            border: solid black 1px;
+            background-color: blanchedalmond;
+            border: outset black 3px;
+            border-radius: 15%;
+        }
+        .midRow {
+            padding: 1rem;  
+            border: solid black 1px;
+            background-color: blanchedalmond;
+            border: outset black 3px;
+            border-radius: 15%;
+
+        }
+        .botRow {
+            padding: 1rem;  
+            border: solid black 1px;
+            background-color: blanchedalmond;
+            border: outset black 3px;
+            border-radius: 15%;
+
+        }
     }
 
-    .leftAd {
-        padding: 1rem;  
-        border: solid black 1px;
-        background-color: blanchedalmond;
-        border: outset black 3px;
+    .price {
+        border: outset grey 2px; 
+        background-color: azure;
+        font-weight: 700;
+        background-size: contain;
+        width: fit-content;
         border-radius: 15%;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
     }
-    .midAd {
-        padding: 1rem;  
-        border: solid black 1px;
-        background-color: blanchedalmond;
-        border: outset black 3px;
-        border-radius: 15%;
 
-    }
-    .rightAd {
-        padding: 1rem;  
-        border: solid black 1px;
-        background-color: blanchedalmond;
-        border: outset black 3px;
-        border-radius: 15%;
+    // .r2 {
+    //     .smAdImgr2 {
+    //         height: 10rem;
+    //         width: 7.5rem;
+    //     }
 
-    }
+    //     .leftAdr2 {
+    //         padding: 1rem;  
+    //         border: solid black 1px;
+    //         background-color: blanchedalmond;
+    //         border: outset black 3px;
+    //         border-radius: 15%;
+    //     }
+    //     .midAdr2 {
+    //         padding: 1rem;  
+    //         border: solid black 1px;
+    //         background-color: blanchedalmond;
+    //         border: outset black 3px;
+    //         border-radius: 15%;
+
+    //     }
+    //     .rightAdr2 {
+    //         padding: 1rem;  
+    //         border: solid black 1px;
+    //         background-color: blanchedalmond;
+    //         border: outset black 3px;
+    //         border-radius: 15%;
+
+    //     }
+    // }
+
+    // .r3 {
+    //     .smAdImgr3 {
+    //         height: 10rem;
+    //         width: 7.5rem;
+    //     }
+
+    //     .leftAdr3 {
+    //         padding: 1rem;  
+    //         border: solid black 1px;
+    //         background-color: blanchedalmond;
+    //         border: outset black 3px;
+    //         border-radius: 15%;
+    //     }
+    //     .midAdr3 {
+    //         padding: 1rem;  
+    //         border: solid black 1px;
+    //         background-color: blanchedalmond;
+    //         border: outset black 3px;
+    //         border-radius: 15%;
+
+    //     }
+    //     .rightAdr3 {
+    //         padding: 1rem;  
+    //         border: solid black 1px;
+    //         background-color: blanchedalmond;
+    //         border: outset black 3px;
+    //         border-radius: 15%;
+
+    //     }
+    // }
+
 }
 
 

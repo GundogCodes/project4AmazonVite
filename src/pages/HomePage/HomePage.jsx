@@ -11,23 +11,21 @@ import PromoCollection from '../../components/PromoCollection/PromoCollection'
 //import NavBar from '../../components/NavBar/NavBar'
 
 export default function HomePage( {searchableItems} ) {
-    //setting whether the promo items are "picked" by the random generation; 
-    //const [items, setItems] = useState([])
-    //const useNavigate = useNavigate(); 
-    //console.log(searchableItems)
 
-    const promotionItems = [
-        searchableItems[0],
-        searchableItems[1],
-        searchableItems[2],
-        searchableItems[3],
-        searchableItems[4],
-        searchableItems[5],
-        searchableItems[6],
-        searchableItems[7],
-        searchableItems[8]
-    ]
-    console.log(promotionItems, 'promotionItems')
+
+    //make a dang for loop!! thank you Teo 
+    // const promotionItems = [
+    //     searchableItems[i]
+    // ] 
+    // console.log(promotionItems, 'promotionItems')
+
+    let promotionItems = [searchableItems]
+    for (let i = 0; i < searchableItems.length; i++){
+        promotionItems.push(searchableItems)
+        //searchableItems.push(promotionItems)
+        console.log([promotionItems])
+    }
+    console.log([promotionItems])
 
     return(
         <div className={styles.HomePage}>

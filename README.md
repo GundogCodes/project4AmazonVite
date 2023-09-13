@@ -7,14 +7,19 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">Contents</a>
       <ul>
         <li><a href="#Purpose">Purpose</a></li>
         <li><a href="#Meet-The-Team">Meet our team</a></li>
         <li><a href="#Portfolio">Portfolio</a></li>
+        <li><a href="#Technologies_Used">Technologies Used</a></li>
+        <li><a href="Routing">API/Routing</a></li>
+        <li><a href="#App/Site_Features">Features</a></li>
+        <li><a href="#Technical_Challenges">Challenges</a></li>
+        <li><a href="#Collaborators">Collaborators</a></li>
       </ul>
     </li>
-    <li>
+    <!-- <li>
       <a href="#placeholder">placeholder</a>
       <ul>
         <li><a href="#API">API</a></li>
@@ -24,46 +29,40 @@
     </li>
     <li><a href="#placeholder">placeholder</a></li>
     <li><a href="#placeholder">placeholder</a></li>
-    <li><a href="#placeholder">placeholder</a></li>
+    <li><a href="#placeholder">placeholder</a></li> -->
   </ol>
 </details>
 
-
-
-
-* [ERD]
-
-* [Trello_Board]
-
-* [Technologies_Used]
-
-* [API]
-
-* [Routing]
-
-* [Testing]
-
-* [App_Features] /*(mentions the function names, type of function (if applicable(i.e. Callback, loop, closure)) what it does, type of request it sends (if applicable), or any other information)*/
-
-* [Technical_Challenges]
-
-* [Collaborators]
-
-### Installation 
+<!-- * [Purpose] (#purpose)
+* [Usage] (#usage)
+* [Portfolio] (#portfolio)
+<!-- * [Wireframes] (#wireframes) -->
+<!-- * [ERD] (#ERD)
+* [Trello_Board] (#trello-board) -->
+<!-- * [Technologies_Used] (#technologies-used)
+<!-- * [API] (#api) -->
+<!-- * [API/Routing] (#api/routing)
+* [Testing] (#testing)
+* [App_Features]  (#app-features) /*(mentions the function names, type of function (if applicable(i.e. Callback, loop, closure)) what it does, type of request it sends (if applicable), or any other information)*/
+* [Technical_Challenges] (#technical-challenges)
+* [Collaborators] (#collaborators) --> 
 
 ### Purpose 
 
 Our team created a MERN stack web application similar in style and function to multinational e-commerce platform, Amazon, for General Assembly coding bootcamp. 
 
-### Meet The Team
+### Usage
 
+This is a basic e-commerce application using the MERN stack. Its main usage is to show the world our newfound programming skills. 
+
+### Portfolio 
 
 <details id ="Portfolio" >
   <summary>Portfolio</summary>
   
   ## Portfolio
   
-  1. Wireframed 
+  1. Wireframes 
 
   ##### Landing Page
   ![Landing Page](./public/img/scamazon-landing-page-correct.png)
@@ -107,13 +106,74 @@ Our team created a MERN stack web application similar in style and function to m
 
   <img src= './public/img/Working-for-Scamazon.png'/>
   
+  2. ERD 
 
   3. Trello
+      https://trello.com/b/9bIYwNbL/scamazon
+      <img src= './public/img/trello.png'/>
+
 </details>
 
+<!-- ### Wireframes
+
+#### Landing Page
+<img src= './public/img/scamazon-landing-page-correct.png'/>
+
+#### Items List
+
+<img src= './public/img/Items-Page.png'/>
+
+#### Item Detail
+
+<img src= './public/img/Item-Detail.png'/>
+
+#### Cart
+
+<img src= './public/img/Cart.png'/>
+
+#### My Orders
+ 
+<img src= './public/img/My-Orders.png'/>
+
+#### Wishlist
+<img src= './public/img/Wishlist.png'/>
 
 
-### Trello Board
+#### Checkout
+
+<img src= './public/img/Checkout.png'/>
+
+#### Login/Sign Up
+
+<img src= './public/img/Login.png'/>
+
+<img src= './public/img/Sign-Up.png'/>
+
+#### My Account
+
+<img src= './public/img/My-Account.png'/>
+
+#### Contact
+
+<img src= './public/img/Contact-Us.png'/>
+
+#### Misc
+
+<img src= './public/img/About.png'/>
+
+<img src= './public/img/Careers.png'/>
+
+<img src= './public/img/Corporate-Values.png'/>
+
+<img src= './public/img/History.png'/>
+
+<img src= './public/img/Job-Opening.png'/>
+
+<img src= './public/img/Mission.png'/>
+
+<img src= './public/img/Testimonies.png'/>
+
+<img src= './public/img/Working-for-Scamazon.png'/> -->
 
 
 ### Technologies_Used
@@ -160,9 +220,46 @@ Our team created a MERN stack web application similar in style and function to m
 
 </details>
 
+-  ITEM ROUTES
+
+| **HTTP Method** | **End Point**    |    **Action**     |
+| :-------------- | :--------------: | ----------------: |
+| GET            | /                 | Get items         |
+| GET            | /:id              |Gets one item by id| 
+
+- ORDER ROUTES
+
+| **HTTP Method** | **End Point**    |    **Action**              |
+| :-------------- | :--------------: | --------------------------:|
+| GET             | /cart            | Gets the cart              |
+| GET             | /history         | Gets order history         |
+| POST            | /cart/items/:id  | Adds to cart               |
+| POST            | /cart/checkout   | Checkout cart              |
+| PUT             | /cart/qty        | Sets item quantity in cart |
+
+- WISHLIST ROUTES
+
+| **HTTP Method** | **End Point**    |    **Action**         |
+| :-------------- | :--------------: | ---------------------:|
+| GET             | /                | Gets the wish list    |
+| POST            | /:id             | Adds to wish list     |
+| DELETE          | /:id             | Delete from wish list |
+
 ### Testing
 
-### App Features 
+### App/Site Features 
+
+- Wish List 
+  `Our wishlist uses MERN stack technology to target items by their id number and add them to an array to be rendered as list. In general, this practice is used by professionals in the industry. Over time, this type of feature has been adopted by several e-commerce companies.` 
+- Cart/Checkout 
+  `Our Cart and Checkout features work hand-in-hand to deliver optimal and speedy services to our customers. We believe users time is more precious than ever, so we understand the importance of streamlined frontend with a solid backend to support the needs of everybody.`
+
+- Rating Component 
+  `We get a rating component on the frontend on a scale of 1 to 5 stars to enhance UX. Rating items allows users to contribute to our little community of shoppers with honest feedback on our products.`
+- Carousel 
+  `We used Bootstrap to make an item carousel on the home page. Carousels are commonly used in frontend development to add animation and interactivity to a page. Animation caters to peoples' short attention spans by allowing users to browse seemlessly through a set of items as soon as they get onto our website. This tricks the users into a feeling of control: they want to browse for items, and they once they go to our site, they get instant gratification.`
+- Category Bar
+  `Our category bar enables users to quckly and seamlessly navigate through each category of items. This is useful for people in need of several items for specfic purposes.`
 
 ### Technical_Challenges
 
