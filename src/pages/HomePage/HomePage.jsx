@@ -44,7 +44,7 @@ export default function HomePage( {searchableItems} ) {
                 // items={items.filter(item => item.name.price === items)}
             />
 
-            {/* <Footer className={styles.Footer} /> */}
+            <Footer />
 
 
         </div>
