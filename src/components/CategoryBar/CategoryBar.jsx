@@ -1,56 +1,22 @@
-import './CategoryBar.css'
-import { slide as Menu } from 'react-burger-menu'
-import { useState } from 'react'
+import styles from './CategoryBar.module.scss'
 import { useNavigate } from 'react-router-dom'
-
-export default function CategoryBar({ categories }){
-  //use states
-  const [category, setCategory] = useState('')
+export default function CategoryBar(){
   const navigate = useNavigate()
-
-
-  //trying to catch the corresponding category
+  const categories =  ['Electronics', 'Sporting Goods', 'Make-up and Cosmetics', 'Books','Air', 'Toys']
   function handleOnClick(e){
-    //defining variables
-    let clickedCategory = e.target.innerText
-    clickedCategory.toLowerCase()
-    category(clickedCategory)
-      
-    //sending the category to the category page
-      setCategoryItems(itemsArr)
-      navigate('/categories', {
-        state: {
-          category: category
-        }
-      })
-    }
-  
 
-    return(
-      <>
-        <Menu>
-          <a className='menu-item' href='/categories' onClick={handleOnClick}>
-            Electronics
-          </a>
-          <a className='menu-item' href='/categories' onClick={handleOnClick}>
-            Toys
-          </a>
-          <a className='menu-item' href='/categories' onClick={handleOnClick}>
-            Gym Equipment
-          </a>
-          <a className='menu-item' href='/categories' onClick={handleOnClick}>
-            Air
-          </a>
-          <a className='menu-item' href='/categories' onClick={handleOnClick}>
-            Clothes
-          </a>
-          <a className='menu-item' href='/categories' onClick={handleOnClick}>
-            Cosmetics
-          </a>
-          <a className='menu-item' href='/categories' onClick={handleOnClick}>
-            Books
-          </a>
-        </Menu>
-      </>
-    )
+    const innerText = e.target.innerText
+    console.log(innerText)
+      navigate(`/categories/${innerText}`)
+      
+    
+  }
+  return(
+    <div className={styles.CategoryBar}>
+      {categories.map(category =>{
+        return <h5 onClick={handleOnClick} >{category}</h5>
+      })}
+
+    </div>
+  )
 }

@@ -25,9 +25,10 @@ import CategoryBar from './components/CategoryBar/CategoryBar'
 
 
 
+
 function App() {
   const [matchedSearches,setMatchedSearches] = useState([])
- 
+  const [dataOfMatchedSearches, setDataOfMatchedSearches] = useState([])
   const [user, setUser] = useState(getUser());
 
   const [searchableItems, setSearchableItems] = useState(null)
@@ -48,28 +49,28 @@ function App() {
   return (
     <>
 
-<div className="App" id="outer-container">
-            <CategoryBar 
-              pageWrapId={'page-wrap'}
-              outerContainerId={'outer-container'} 
-            />
-    <div id="page-wrap">
-
-
-      <NavBar routes={routes} />
 
 
     {searchableItems?
-    <NavBar searchableItems={searchableItems} user={user} setUser={setUser} matchedSearches={matchedSearches} setMatchedSearches={setMatchedSearches}/> :<></>
+    <NavBar searchableItems={searchableItems} 
+    user={user} 
+    setUser={setUser} 
+    matchedSearches={matchedSearches} 
+    setMatchedSearches={setMatchedSearches}
+    dataOfMatchedSearches={dataOfMatchedSearches}
+    setDataOfMatchedSearches={setDataOfMatchedSearches}
+    /> :<></>
   }
+  <CategoryBar/>
+
 
     <Routes>
       <Route path="/" element={searchableItems && <HomePage searchableItems={searchableItems}  />}/>
 
       <Route path="/user" element={<UserPage user={user} setUser={setUser}/>}/>
-      <Route path="/search" element={<SearchPage/>}/>
+      <Route path="/search" element={<SearchPage matchedSearches={matchedSearches} setMatchedSearches={setMatchedSearches} searchableItems={searchableItems} dataOfMatchedSearches={dataOfMatchedSearches} setDataOfMatchedSearches={setDataOfMatchedSearches}/>}/>
       <Route path="/item/:id" element={<ItemPage/>}/>
-      <Route path="/categories" element={<CategoryPage />}/>
+      <Route path="/categories/:name" element={searchableItems && <CategoryPage searchableItems={searchableItems} />}/>
       <Route path="/orders" element={<OrderPage/>}/>
       <Route path="/address" element={<AddressFormPage user={user} setUser={setUser} />}/>
       <Route path="/payments" element={<YourPaymentPage user={user} setUser={setUser}/>}/>
@@ -79,9 +80,6 @@ function App() {
       <Route path="/cart" element={<CartPage user={user} setUser={setUser}/>} />
     </Routes>
       <LogOut user={user} setUser={setUser} />
-    </div>
-    </div>
-    
     </>
   );
 }
