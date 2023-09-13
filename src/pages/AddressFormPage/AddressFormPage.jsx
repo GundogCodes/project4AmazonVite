@@ -4,7 +4,7 @@ import styles from './AddressFormPage.module.scss'
 import LoginPage from '../LoginPage/LoginPage'
 import { updateUserInfo } from '../../utilities/users-api.cjs'
 import { getUser } from '../../utilities/users-service.cjs'
-
+import Footer from '../../components/Footer/Footer'
 export default function AddressForm({user, setUser}){
     const [initUserAddress, setInitUserAddress] = useState({
         street:'',
@@ -100,6 +100,7 @@ export default function AddressForm({user, setUser}){
     <h1 className={styles.linkToLogin}><Link to='/login'>Please Login to Continue </Link></h1>
     </div>
     }
+    <Footer/>
         </div>
                 
             )

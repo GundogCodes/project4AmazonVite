@@ -1,31 +1,31 @@
 .Footer {
-  display: flex;
-  margin-bottom: 0;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  color: white;
-  height: 100vh;
-  background-color: rgba(37,47,61);
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  section{
-    margin-top: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    h6{
+    margin-bottom: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    color: white;
+    height: 15vh;
+    background-color: rgba(37,47,61);
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    section{
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      h6{
 
-      font-weight: bold;
-    }
-    p{
+        font-weight: bold;
+      }
+      p{
 
+      }
+      p:hover{
+        text-decoration: underline;
+      }
     }
-    p:hover{
-      text-decoration: underline;
-    }
+
   }
-
-}
-
+  

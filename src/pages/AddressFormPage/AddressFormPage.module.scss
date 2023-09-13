@@ -19,7 +19,7 @@
         flex-direction: row;
         width: 100vw;
         height: 500px;
-        
+
         justify-content: center;
         align-items: center;
         .currentAddress{
@@ -60,6 +60,7 @@
                 border-width: 1px;
                 align-self: flex-start;
                 width: 400px;
+                height: 60px;
                 display: flex;
                 align-items: center;
                 span{
@@ -69,8 +70,8 @@
                     margin-left: 1vmin;
                 }
                 img{
-                    margin-left: 1vmin;
-                    width:3vw;
+                    margin-left: 2vmin;
+                    height: 30px;
                 }
             }
             h1{

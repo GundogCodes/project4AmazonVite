@@ -32,7 +32,10 @@
     color: #111111;
     font-family: Arial, sans-serif;
     font-weight: 500;
-    margin-bottom: 5px;
+}
+h5 {
+
+    padding-top: 10px;
 }
 
 .createAccount__container>h1 {
@@ -44,7 +47,10 @@
     margin: 0px 0px 10px;
     padding: 0px 0px 4px;
     height: 15px;
+
+
 }
+
 
 .createAccount__divider {
     border: none;
@@ -74,6 +80,7 @@
 .createAccount__nameFields {
     display: flex; 
     gap: 10px; 
+
 }
 
 .createAccount__nameFields input {
@@ -137,5 +144,9 @@
     margin-top: 10px;
     display: flex;
     justify-content: center;
+
 }
 
+.createAccount__buttonContainer >button:hover {
+    background-color: adjust-hue($color: #ffab59, $degrees: 0);
+}

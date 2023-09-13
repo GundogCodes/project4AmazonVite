@@ -1,7 +1,7 @@
 .SearchBar {
     display: flex;
     flex-direction: column;
-
+    z-index: 100;
 
     .searchBarDiv {
         display: flex;
@@ -17,6 +17,7 @@
 
             width: 800px;
             border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
             height: 50px;
 
         }
@@ -40,10 +41,13 @@
     }
 
     .searchResultsList {
+
+        border-top-left-radius: 15px;
+
         border-style: solid;
         border-color: black;
         border-width: 1px;
-        
+
         background-color: white;
         width: 800px;
         position: absolute;
@@ -61,7 +65,7 @@
         .searchResult {
 
             overflow-y: visible;
-
+            z-index: 10000;
             color: black;
             width: 800px;
 

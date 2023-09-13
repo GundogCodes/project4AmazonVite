@@ -12,5 +12,9 @@ export function getById(id) {
     return sendRequest(`${BASE_URL}/${id}`)
 }
 
+// export function getItemByName(nameOfItem){
+//   return sendRequest(`${BASE_URL}/name`, nameOfItem)
+// }
+
 
 

@@ -43,9 +43,9 @@ export default function HomePage( {searchableItems} ) {
             <PromoCollection promotionItems={promotionItems}
                 // items={items.filter(item => item.name.price === items)}
             />
-            <footer>
-            <Footer className={styles.Footer} />
-            </footer>
+
+            {/* <Footer className={styles.Footer} /> */}
+
 
         </div>
     )
