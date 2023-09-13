@@ -1,4 +1,4 @@
-import CategoryBar from '../CategoryBar/CategoryBar'
+import CategoryBar from '../../components/CategoryBar/CategoryBar'
 
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';

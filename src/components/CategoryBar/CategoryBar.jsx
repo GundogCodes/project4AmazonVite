@@ -3,7 +3,7 @@ import { slide as Menu } from 'react-burger-menu'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-export default function CategoryBar({ categories, searchableItems }){
+export default function CategoryBar({ categories }){
   //use states
   const [category, setCategory] = useState('')
   const navigate = useNavigate()
@@ -24,7 +24,7 @@ export default function CategoryBar({ categories, searchableItems }){
         }
       })
     }
-  }
+  
 
     return(
       <>
@@ -53,5 +53,4 @@ export default function CategoryBar({ categories, searchableItems }){
         </Menu>
       </>
     )
-
 }

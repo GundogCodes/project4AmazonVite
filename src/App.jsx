@@ -20,6 +20,9 @@ import EditUserPage from './pages/EditUserPage/EditUserPage'
 import {getUser} from '../src/utilities/users-service.cjs'
 import Footer from './components/Footer/Footer'
 import LogOut from './components/LogOut/LogOut'
+import CartPage from './pages/CartPage/CartPage'
+import CategoryBar from './components/CategoryBar/CategoryBar'
+
 
 
 function App() {
@@ -45,16 +48,15 @@ function App() {
   return (
     <>
 
-      <div className="App" id="outer-container">
+<div className="App" id="outer-container">
             <CategoryBar 
               pageWrapId={'page-wrap'}
               outerContainerId={'outer-container'} 
-              searchableItems={searchableItems}
-              user={user}
-              setUser={setUser}
             />
-        <div id="page-wrap">
-            <NavBar routes={routes} />
+    <div id="page-wrap">
+
+
+      <NavBar routes={routes} />
 
 
     {searchableItems?
@@ -77,6 +79,9 @@ function App() {
       <Route path="/cart" element={<CartPage user={user} setUser={setUser}/>} />
     </Routes>
       <LogOut user={user} setUser={setUser} />
+    </div>
+    </div>
+    
     </>
   );
 }
