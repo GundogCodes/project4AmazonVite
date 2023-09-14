@@ -159,7 +159,8 @@ This is a basic e-commerce application using the MERN stack. Its main usage is t
 | [![Slack][Slack]][Slack-url] | [![Vscode][Vscode]][Vscode-url] | [![Github][Github]][Github-url] | [![Trello][Trello]][Trello-url] | [![BootStrap][BootStrap]][BootStrap-url] |
 | [![JWT][JWT]][JWT-url] | [![DigitalOcean][DigitalOcean]][DigitalOcean-url] | ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
  | [![Babel][Babel]][Babel-url] | [![Nodemon][Nodemon]][Nodemon-url] |
-| [![Webpack][Webpack]][Webpack-url] | [![Storybook][Storybook]][Storybook-url] | [![Gulp][Gulp]][Gulp-url] | [![MongoCompass][MongoCompass]][MongoCompass-url] | 
+| [![Webpack][Webpack]][Webpack-url] | ![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)
+ | [![Gulp][Gulp]][Gulp-url] | [![MongoCompass][MongoCompass]][MongoCompass-url] | 
 
 
 <details id ="API" >
@@ -312,7 +313,6 @@ This is a basic e-commerce application using the MERN stack. Its main usage is t
 
 [Vite-url]:
 
-![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)
 
 [Storybook-url]:
 
