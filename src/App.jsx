@@ -18,16 +18,17 @@ import AddressFormPage from './pages/AddressFormPage/AddressFormPage'
 import YourPaymentPage from './pages/YourPaymentsPage/YourPaymentsPage'
 import EditUserPage from './pages/EditUserPage/EditUserPage'
 import {getUser} from '../src/utilities/users-service.cjs'
-import Footer from './components/Footer/Footer'
+
 import LogOut from './components/LogOut/LogOut'
 import CartPage from './pages/CartPage/CartPage'
+import CategoryBar from './components/CategoryBar/CategoryBar'
 
 
 
 
 function App() {
   const [matchedSearches,setMatchedSearches] = useState([])
- 
+  const [dataOfMatchedSearches, setDataOfMatchedSearches] = useState([])
   const [user, setUser] = useState(getUser());
 
   const [searchableItems, setSearchableItems] = useState(null)
@@ -51,23 +52,32 @@ function App() {
 
 
     {searchableItems?
-    <NavBar searchableItems={searchableItems} user={user} setUser={setUser} matchedSearches={matchedSearches} setMatchedSearches={setMatchedSearches}/> :<></>
+    <NavBar searchableItems={searchableItems} 
+    user={user} 
+    setUser={setUser} 
+    matchedSearches={matchedSearches} 
+    setMatchedSearches={setMatchedSearches}
+    dataOfMatchedSearches={dataOfMatchedSearches}
+    setDataOfMatchedSearches={setDataOfMatchedSearches}
+    /> :<></>
   }
+  <CategoryBar/>
+
 
     <Routes>
       <Route path="/" element={searchableItems && <HomePage searchableItems={searchableItems}  />}/>
 
       <Route path="/user" element={<UserPage user={user} setUser={setUser}/>}/>
-      <Route path="/search" element={<SearchPage/>}/>
+      <Route path="/search" element={<SearchPage matchedSearches={matchedSearches} setMatchedSearches={setMatchedSearches} searchableItems={searchableItems} dataOfMatchedSearches={dataOfMatchedSearches} setDataOfMatchedSearches={setDataOfMatchedSearches}/>}/>
       <Route path="/item/:id" element={<ItemPage/>}/>
-      <Route path="/categories" element={<CategoryPage />}/>
+      <Route path="/categories/:name" element={searchableItems && <CategoryPage searchableItems={searchableItems} />}/>
       <Route path="/orders" element={<OrderPage/>}/>
       <Route path="/address" element={<AddressFormPage user={user} setUser={setUser} />}/>
       <Route path="/payments" element={<YourPaymentPage user={user} setUser={setUser}/>}/>
       <Route path="/edit" element={<EditUserPage user={user} setUser={setUser}/>}/>
       <Route path="/login" element={<LoginPage user={user} setUser={setUser}/>}/>
       <Route path="/wishlist" element={<WishlistPage user={user} setUser={setUser}/>}/>
-      <Route path="/cart" element={<CartPage user={user} setUser={setUser}/>} />
+      <Route path="/cart" element={<CartPage user={user} setUser={setUser} searchableItems={searchableItems}/>} />
     </Routes>
       <LogOut user={user} setUser={setUser} />
     </>

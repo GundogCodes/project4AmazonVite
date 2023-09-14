@@ -2,122 +2,131 @@
     display: flex; 
     flex-direction: row;
     // background-color: rgb(174, 189, 174);
-    width: 35rem;
-    margin-top: 2rem;
-    
-    
+    width: 95vw;
+
+    top: 1600px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
     .leftCol, .midCol, .rightCol {
+        
+        width: 500px;
+        margin: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
 
-        .smAdImg {
-            height: 11rem;
-            width: 8.5rem;
-            border: outset grey 3px; 
-            border-radius: 15%;
-            margin: 5px;
+        .smAdImg { 
+            height: 400px;
+            width: 300px;
 
+            
+
+            border-style: solid;
+
+            
         }
-
+        
         .topRow {
-            padding: 1rem;  
-            border: solid black 1px;
-            background-color: blanchedalmond;
-            border: outset black 3px;
-            border-radius: 15%;
+            margin: 10px;
+            margin-left:10px ;
+            margin-right: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: green;
+            height: 600px;
+
+            background-color: white;
+            box-shadow: 8px 8px 3px 3px gainsboro;
+
+            
+
+
+            .titles{
+                align-self: center;
+                justify-self: center;
+                font-weight: bold;
+                font-size: 25px;
+             
+            }
+            .price{
+                margin-top: 60px;
+                font-size: 20px;
+                font-weight: bold;
+                border-style: none;
+            }
+        }
+        .topRow:hover{
+            background-color: rgba(247,247,247);
+
+
         }
         .midRow {
-            padding: 1rem;  
-            border: solid black 1px;
-            background-color: blanchedalmond;
-            border: outset black 3px;
-            border-radius: 15%;
+            box-shadow: 8px 8px 3px 3px gainsboro;
+
+            margin: 10px;
+            margin-left:10px ;
+            margin-right: 10px;
+            height: 600px;
+            display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: green;
+            background-color: white;
+
+
+
+            .titles{
+                align-self: center;
+                justify-self: center;
+                font-weight: bold;
+                font-size: 25px;
+            }
+            .price{
+                margin-top: 60px;
+                font-size: 20px;
+                font-weight: bold;
+                border-style: none;
+            }
+        }
+        .midRow:hover{
+            background-color: rgba(247,247,247);
 
         }
         .botRow {
-            padding: 1rem;  
-            border: solid black 1px;
-            background-color: blanchedalmond;
-            border: outset black 3px;
-            border-radius: 15%;
+            box-shadow: 8px 8px 3px 3px gainsboro;
+
+            margin: 10px;
+            margin-left:10px ;
+            margin-right: 10px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            
+
+            border-style: none;
+
+            .titles{
+                align-self: center;
+                justify-self: center;
+                font-weight: bold;
+                font-size: 25px;
+                padding-left: 20px;
+            }
+            .price{
+                margin-top: 60px;
+                font-size: 20px;
+                font-weight: bold;
+                border-style: none;
+
+            }
+        }
+        .botRow:hover{
+            background-color: rgba(247,247,247);
 
         }
     }
 
-    .price {
-        border: outset grey 2px; 
-        background-color: azure;
-        font-weight: 700;
-        background-size: contain;
-        width: fit-content;
-        border-radius: 15%;
-        justify-items: center;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-    }
-
-    // .r2 {
-    //     .smAdImgr2 {
-    //         height: 10rem;
-    //         width: 7.5rem;
-    //     }
-
-    //     .leftAdr2 {
-    //         padding: 1rem;  
-    //         border: solid black 1px;
-    //         background-color: blanchedalmond;
-    //         border: outset black 3px;
-    //         border-radius: 15%;
-    //     }
-    //     .midAdr2 {
-    //         padding: 1rem;  
-    //         border: solid black 1px;
-    //         background-color: blanchedalmond;
-    //         border: outset black 3px;
-    //         border-radius: 15%;
-
-    //     }
-    //     .rightAdr2 {
-    //         padding: 1rem;  
-    //         border: solid black 1px;
-    //         background-color: blanchedalmond;
-    //         border: outset black 3px;
-    //         border-radius: 15%;
-
-    //     }
-    // }
-
-    // .r3 {
-    //     .smAdImgr3 {
-    //         height: 10rem;
-    //         width: 7.5rem;
-    //     }
-
-    //     .leftAdr3 {
-    //         padding: 1rem;  
-    //         border: solid black 1px;
-    //         background-color: blanchedalmond;
-    //         border: outset black 3px;
-    //         border-radius: 15%;
-    //     }
-    //     .midAdr3 {
-    //         padding: 1rem;  
-    //         border: solid black 1px;
-    //         background-color: blanchedalmond;
-    //         border: outset black 3px;
-    //         border-radius: 15%;
-
-    //     }
-    //     .rightAdr3 {
-    //         padding: 1rem;  
-    //         border: solid black 1px;
-    //         background-color: blanchedalmond;
-    //         border: outset black 3px;
-    //         border-radius: 15%;
-
-    //     }
-    // }
-
 }
-
-
-

@@ -1,25 +1,22 @@
-
 import styles from './CategoryBar.module.scss'
+import { useNavigate } from 'react-router-dom'
+export default function CategoryBar(){
+  const navigate = useNavigate()
+  const categories =  ['Electronics', 'Sporting Goods', 'Make-up and Cosmetics', 'Books','Air', 'Toys']
+  function handleOnClick(e){
 
-
-export default function CategoryBar(props){
-    return(
-      <>
-
-        {/* defining an offcanvas category bar button thing */}
-        
-{/* menu on click categories onclick event 
-setstate any showcategory varibale
-showcategory=yes then u enable to show the sidebar compoenent */}
-
-        {/* offcanvas sidebar functionality */}
-
-        
-
-      </>
-
-        
-    )
-
+    const innerText = e.target.innerText
+    console.log(innerText)
+      navigate(`/categories/${innerText}`)
+      
     
+  }
+  return(
+    <div className={styles.CategoryBar}>
+      {categories.map(category =>{
+        return <h5 onClick={handleOnClick} >{category}</h5>
+      })}
+
+    </div>
+  )
 }

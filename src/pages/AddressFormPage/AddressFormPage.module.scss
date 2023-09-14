@@ -13,16 +13,23 @@
             margin-top: 50vh;
         }
     }
+    h1{
+        margin-left: 60px;
+        margin-top:50px;
+        width: 100vw;
+
+    }
     .AddressForm{
-        
+
         display: flex;
         flex-direction: row;
         width: 100vw;
         height: 500px;
-        
+
         justify-content: center;
         align-items: center;
         .currentAddress{
+
             box-shadow: 8px 8px 3px 3px gainsboro;
             margin: 10vmin;
             padding: 2vmin;
@@ -33,14 +40,21 @@
             align-items: flex-start;
             justify-content: flex-start;
             width: 500px;
-            height: 600px;
+            height: 400px;
             border-width: 3px;
             border-radius: 10px;
+            h2{
+
+                margin-top: -15px;
+
+            }
             .username{
                 font-weight: bold;
             }
         }
         .theForm{
+
+            height: 400px;
             padding:2vmin ;
             box-shadow: 8px 8px 3px 3px gainsboro;
             border-style: solid;
@@ -49,7 +63,7 @@
             align-items: center;
             justify-content: flex-start;
             width: 500px;
-            height: 600px;
+
             font-weight: bold;
             border-width: 1px;
             border-radius: 10px;
@@ -60,6 +74,7 @@
                 border-width: 1px;
                 align-self: flex-start;
                 width: 400px;
+                height: 60px;
                 display: flex;
                 align-items: center;
                 span{
@@ -69,12 +84,14 @@
                     margin-left: 1vmin;
                 }
                 img{
-                    margin-left: 1vmin;
-                    width:3vw;
+                    margin-left: 2vmin;
+                    height: 30px;
                 }
             }
-            h1{
+            h2{
+                margin-top: -15px;
                 align-self: flex-start;
+
             }
             .text{
                 align-self:flex-start;
@@ -85,7 +102,7 @@
                 border-width: 1px;
                 border-radius: 10px;
                 align-self:flex-start;
-                font-size: 2vmin;
+                font-size: 10px;
                 width: 400px;
             }
             .submit{
@@ -95,8 +112,8 @@
                 margin-top: 10px;
                 font-weight: bold;
                 width: 120px;
-                padding-top: 0.5vmin;
-                padding-bottom: 0.5vmin;
+                padding-top: 5px;
+                padding-bottom: 5px;
                 align-self:flex-start;
                 background-color:rgba(249,217,76) ;
                 border-radius: 15px;

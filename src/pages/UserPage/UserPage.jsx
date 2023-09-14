@@ -2,7 +2,8 @@ import {useEffect, useState} from 'react'
 import styles from './UserPage.module.scss'
 import {Link} from 'react-router-dom'
 import LoginPage from '../LoginPage/LoginPage'
-import {signUp,login, logOut, getUser} from '../../utilities/users-service.cjs'
+import Footer from '../../components/Footer/Footer'
+
 export default function UserPage({user,setUser}){
    
     //console.log('user(from userPage) : ',user)
@@ -70,6 +71,7 @@ export default function UserPage({user,setUser}){
 
                 <LoginPage user={user} setUser={setUser} />
             }
+            <Footer/>
                 </div>
                 
                 

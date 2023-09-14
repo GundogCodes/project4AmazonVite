@@ -60,7 +60,7 @@ export default function LoginForm({user, setUser }) {
 
     return (
         <div className={styles.login}>
-         
+            
             <div className={styles.login__container}>
                 {showSignUpForm ? (
                     <SignUpForm setUser={setUser} />

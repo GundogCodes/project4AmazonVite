@@ -9,7 +9,7 @@ export default function PromoCollection({promotionItems}) {
     for (let items of promotionItems) {
       collectionItems.push(items)
     }
-    console.log(collectionItems, 'collectionItems')
+    //console.log(collectionItems, 'collectionItems')
 
 // const promoCollection = items.map(i => 
 //     <PromoItem

@@ -1,97 +1,48 @@
 import styles from './Footer.module.scss'
-
+import { Link } from 'react-router-dom'
 export default function Footer(props){
     return(
-        <>
-            <footer className={styles.footer}>
-            <div className={styles.footer__addr}>
-                <h1 className={styles.footer__logo}>Something</h1>
-                    
-                <h2>Contact</h2>
-                
-                <address>
-                5534 Somewhere In. The World 22193-10212<br/>
-                    
-                <a className={styles.footer__btn} href="mailto:example@gmail.com">Email Us</a>
-                </address>
-            </div>
-            
-            <ul className={styles.footer__nav}>
-                <li className={styles.nav__item}>
-                <h2 className={styles.nav__title}>Media</h2>
+        <div className={styles.Footer}>
+            <section>
+                <h6>Get to Know Us</h6>
+                <a href={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'}><p>Careers</p>
+                <p>Scamazon and Our Planet</p>
+                <p>Investor Relations</p>
+                <p>Press Releases</p>
+                <p>Scamazon Science</p></a>
+            </section>
 
-                <ul className={styles.nav__ul}>
-                    <li>
-                    <a href="#">Online</a>
-                    </li>
-
-                    <li>
-                    <a href="#">Print</a>
-                    </li>
-                        
-                    <li>
-                    <a href="#">Alternative Ads</a>
-                    </li>
-                </ul>
-                </li>
-                
-                <li className="nav__item nav__item--extra">
-                <h2 className={styles.nav__title}>Technology</h2>
-                
-                <ul className={styles.nav__ul}>
-                    <li>
-                    <a href="#">Hardware Design</a>
-                    </li>
-                    
-                    <li>
-                    <a href="#">Software Design</a>
-                    </li>
-                    
-                    <li>
-                    <a href="#">Digital Signage</a>
-                    </li>
-                    
-                    <li>
-                    <a href="#">Automation</a>
-                    </li>
-                    
-                    <li>
-                    <a href="#">Artificial Intelligence</a>
-                    </li>
-                    
-                    <li>
-                    <a href="#">IoT</a>
-                    </li>
-                </ul>
-                </li>
-                
-                <li className={styles.nav__item}>
-                <h2 className={styles.nav__title}>Legal</h2>
-                
-                <ul className={styles.nav__ul}>
-                    <li>
-                    <a href="#">Privacy Policy</a>
-                    </li>
-                    
-                    <li>
-                    <a href="#">Terms of Use</a>
-                    </li>
-                    
-                    <li>
-                    <a href="#">Sitemap</a>
-                    </li>
-                </ul>
-                </li>
-            </ul>
+            <section>
+                <h6>Make Money with Us</h6>
+                <a href={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'}><p>Sell on Scamazon</p>
+                <p>Supply to Scamazon</p>
+                <p>Become an Affiliate</p>
+                <p>Protect & Build Your Brand</p>
+                <p>Sell on Scamazon Handmade</p>
+                <p>Advertise Your Products</p>
+                <p>Independently Publish with Us</p>
+                <p>Host an Scamazon Hub</p></a>
+            </section>
             
-            <div className={styles.legal}>
-                <p>&copy; 20Something. All rights reserved.</p>
-                
-                <div className={styles.legal__links}>
-                <span>Made with <span className={styles.heart}>♥</span> remotely from Anywhere</span>
-                </div>
-                </div>
-            </footer>
-        </>
+            <section>
+                <h6>Amazon Payment Products</h6>
+                <a href={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'}><p>Scamazon.com Rewards Mastercard</p>
+                <p>Shop with Points</p>
+                <p>Reload Your Balance</p>
+                <p>Scamazon Currency Converter</p>
+                <p>Gift Cards</p>
+                <p>Scamazon Cash</p></a>
+            </section>
+            
+            <section>
+                <h6>Let us Help You</h6>
+                <a href={'https://www.youtube.com/watch?v=dQw4w9WgXcQ'}> <p>Shipping Rates & Policies</p>
+                <p>Scamazon Prime</p>
+                <p>Returns Are Easy</p>
+                <p>Manage Your Content and Devices</p>
+                <p>Customer Service</p></a>
+            </section>
+        
+        </div>
     )
 }

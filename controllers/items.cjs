@@ -2,7 +2,9 @@ const Item = require('../models/item.cjs');
 
 module.exports = {
   index,
-  show,
+  show
+
+
 };
 
 async function index(req, res) {
@@ -22,4 +24,6 @@ async function show(req, res) {
   } catch (e) {
     res.status(400).json({ msg: e.message });
   }
+  
 }
+

@@ -52,20 +52,21 @@ const dataController = {
 
   async login(req, res, next) {
     try {
-      const user = await User.findOne({ email: req.body.email });
-      req.user = user;
+        const user = await User.findOne({
+          $or: [{ email: req.body.loginValue }, { phoneNumber: req.body.loginValue }],
+         });
+        
+        req.user = user;
       if (!user) throw Error();
       const match = await bcrypt.compare(req.body.password, user.password);
       if (!match) throw new Error();
       res.locals.data.user = user;
-      const token = createJWT(user);
-      res.locals.data.token = token;
-      console.log(token);
+      res.locals.data.token = createJWT(user);
       console.log('----res.locals.data.user-----', res.locals.data.user);
       console.log('----res.locals.data.token-----', res.locals.data.token);
       next();
     } catch (error) {
-      res.status(400).json(error);
+      res.status(400).json('Bad Credentials');
     }
   },
 

@@ -1,29 +1,47 @@
 .HomePage{
-    margin-top: 110px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(230, 155, 15);
-    margin-bottom: 30rem;
-    justify-content: space-evenly;
-    height: 100%; 
-    width: 100%;
+    background-color: rgb(196,217,221);
 
-
-
-    .pageBanner {
-        align-self: center;
-        height: 8rem; 
-        width: 14rem; 
-        margin-bottom: .5rem;
-        padding: 1.5rem;
-        margin-top: 2rem;
+    height: 305vw;
+    width: 100vw;
+    img{
+        width: 100vw;
     }
-
-    footer {
-      align-self: center;
-      justify-self: center;
-      left: 150px;
-    }
+    .Footer {
+        top:1000px;
+        display: flex;
+        margin-bottom: 0;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        color: white;
+        height:40vh;
+        background-color: rgba(37,47,61);
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        section{
+          margin-top: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          h6{
+    
+            font-weight: bold;
+          }
+          p{
+    
+          }
+          p:hover{
+            text-decoration: underline;
+          }
+        }
+    
+      }
+      
+    
 
 }

@@ -1,10 +1,26 @@
 .CategoryBar {
-    height: 80px;
-    width:80px;
-    color: red;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width:100vw;
+    background-color: rgba(34,41,53);
+    top:75px;
+    justify-content: space-around;
+    align-self: center;
+    z-index: 40;
+    
+    h5{
+        align-self: center;
+        color:white;
+        padding: 2px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    h5:hover{
+        border-style: solid;
+        border-width: 2px;
+        border-color: white;
+    }
 
-}
-
-#sidebar {
-    background-color: white;
 }

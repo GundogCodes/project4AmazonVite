@@ -1,19 +1,22 @@
 .UserPage{
 
-    height: 100vh;
+
+    height: 90vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     font-family:  "Amazon Ember", Arial, sans-serif;
+    overflow-y: visible;
+
     .user{
-        margin-top: 10vh;
+        margin-top: 95px;
         width: 78vw;
         font-size: 3vmin;
     }
     .userOptions{
-        
+        margin-top: -10px;
         position: relative;
         display:flex;
         flex-direction: column;
@@ -35,7 +38,7 @@
         }
         .box{
             box-shadow: 8px 8px 3px 3px gainsboro;
-        display: flex;
+            display: flex;
             flex-direction: row;
             align-items: center;
             border:solid;
@@ -48,7 +51,7 @@
             margin: 1vmin;
             position: relative;
             img{
-
+                height: 80px;
                 width: 80px;
             }
             .pDiv{
