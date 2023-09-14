@@ -1,63 +1,76 @@
 .WishlistPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  color: black;
+  .WishlistContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    color: black;
+    text-align: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: white;
-    width: 100vw;
-    height: 100vh;
+    width: 80vw;
+    height: 80vh;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .wishlistItem {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
     color: black;
-    .WishlistContainer {
-        display: flex;
-        flex-direction: column;
-        color: black;
-        text-align: center;        
-        justify-content: flex-start;    
-        align-items: center;  
-        background-color: white;
-        width: 80vw;
-        height: 80vh;
-        overflow: hidden;
-        white-space: nowrap;
+    background-color: white;
+    border: 0.1vmin solid black;
+    width: 75vw;
+    height: 10vh;
+
+    > p {
+      margin: 0 1rem;
     }
 
-    .wishlistItem {
-        flex-direction: row;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem;
-        color: black;
-        background-color: white;
-        border: .1vmin solid black;
-        width: 75vw;
-        height: 10vh;
-
-        
-        
-        > p { 
-            margin: 0 1rem;
-        }
-
-        > img {
-            border: .1vmin solid black;
-            margin-right: 1rem;
-            width: 5vw;
-            height: 5vh;
-        }
-
-        > button {
-            margin-left: 1rem;
-        }
+    > img {
+      border: 0.1vmin solid black;
+      margin-right: 1rem;
+      width: 5vw;
+      height: 5vh;
     }
 
+    > button {
+      margin-left: 1rem;
+    }
+  }
 }
 
-.buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 10vw;
-    height: 10vh;
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 10vw;
+  height: 10vh;
+}
+
+.delete {
+  background-color: rgb(249, 217, 76);
+  border: none;
+  border-radius: 50px;
+  width: 100%;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: black;
+}
+
+.delete:hover {
+  background-color: rgb(240, 204, 68);
 }
