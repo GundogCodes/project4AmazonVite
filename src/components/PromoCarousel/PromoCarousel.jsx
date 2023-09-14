@@ -30,7 +30,7 @@ export default function PromoCarousel({promotionItems}) {
       <Carousel.Item className={styles.CarouselItem} >
       <Link to={`item/${promotionItems[0][51]._id}`} > <Image 
           className="d-block w-100"
-          src='./img/rey.png'
+          src='./img/rey.png' 
           /> </Link>
           <Carousel.Caption className={styles.caption}>
           <h3 className={styles.cardTitle}> {carouselItems[0][51].name} </h3>

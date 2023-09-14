@@ -1,4 +1,3 @@
-<img src= './public/img/scamazon.png'/>
 
 # SCAMAZON
 ### "Delivering imaginary solutions to your imaginary needs." - Scamazon CEO, Melon Husk
@@ -19,33 +18,9 @@
         <li><a href="#Collaborators">Collaborators</a></li>
       </ul>
     </li>
-    <!-- <li>
-      <a href="#placeholder">placeholder</a>
-      <ul>
-        <li><a href="#API">API</a></li>
-        <li><a href="#placeholder">placeholder</a></li>
-        <li><a href="#placeholder">placeholder</a></li>
-      </ul>
-    </li>
-    <li><a href="#placeholder">placeholder</a></li>
-    <li><a href="#placeholder">placeholder</a></li>
-    <li><a href="#placeholder">placeholder</a></li> -->
+
   </ol>
 </details>
-
-<!-- * [Purpose] (#purpose)
-* [Usage] (#usage)
-* [Portfolio] (#portfolio)
-<!-- * [Wireframes] (#wireframes) -->
-<!-- * [ERD] (#ERD)
-* [Trello_Board] (#trello-board) -->
-<!-- * [Technologies_Used] (#technologies-used)
-<!-- * [API] (#api) -->
-<!-- * [API/Routing] (#api/routing)
-* [Testing] (#testing)
-* [App_Features]  (#app-features) /*(mentions the function names, type of function (if applicable(i.e. Callback, loop, closure)) what it does, type of request it sends (if applicable), or any other information)*/
-* [Technical_Challenges] (#technical-challenges)
-* [Collaborators] (#collaborators) --> 
 
 ### Purpose 
 
@@ -182,9 +157,9 @@ This is a basic e-commerce application using the MERN stack. Its main usage is t
 | ------- | ------- | ------- | ------- | ------- |
 | [![React][React.js]][React-url] | [![Nodejs][Node.js]][Node-url] | [![Express][Express]][Express-url] | [![Postman][Postman]][Postman-url] | [![Mongodb][Mongodb]][Mongodb-url] |
 | [![Slack][Slack]][Slack-url] | [![Vscode][Vscode]][Vscode-url] | [![Github][Github]][Github-url] | [![Trello][Trello]][Trello-url] | [![BootStrap][BootStrap]][BootStrap-url] |
-| [![JWT][JWT]][JWT-url] | [![DigitalOcean][DigitalOcean]][DigitalOcean-url] | [![Gulp][Gulp]][Gulp-url] | [![Babel][Babel]][Babel-url] | [![Nodemon][Nodemon]][Nodemon-url] |
-| [![Webpack][Webpack]][Webpack-url] | [![DigitalOcean][DigitalOcean]][DigitalOcean-url] | [![Gulp][Gulp]][Gulp-url] | [![Babel][Babel]][Babel-url] | [![Nodemon][Nodemon]][Nodemon-url] |
-
+| [![JWT][JWT]][JWT-url] | [![DigitalOcean][DigitalOcean]][DigitalOcean-url] | [![Vite][Vite]][Vite-url] | [![Babel][Babel]][Babel-url] | [![Nodemon][Nodemon]][Nodemon-url] |
+| [![Webpack][Webpack]][Webpack-url] | [![Storybook][Storybook]][Storybook-url] | [![Gulp][Gulp]][Gulp-url] | [![MongoCompass][MongoCompass]][MongoCompass-url] | 
+//vite storybook bootstrap mongocompass
 
 <details id ="API" >
   <summary>API</summary>
@@ -261,9 +236,6 @@ This is a basic e-commerce application using the MERN stack. Its main usage is t
 - Category Bar
   `Our category bar enables users to quckly and seamlessly navigate through each category of items. This is useful for people in need of several items for specfic purposes.`
 
-### Technical_Challenges
-
-   #### Installing Vite 
 
 
 ### Collaborators 
@@ -334,5 +306,16 @@ This is a basic e-commerce application using the MERN stack. Its main usage is t
 
 [Webpack]: https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black
 
-[Webpack-url]: https://webpack.js.org/
+[Webpack-url]: https://webpack.js.org/ 
 
+[Vite]: 
+
+[Vite-url]:
+
+[Storybook]:
+
+[Storybook-url]:
+
+[MongoCompass]: 
+
+[MongoCompass-url]:
