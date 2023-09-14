@@ -21,11 +21,10 @@ export default function PromoCarousel({promotionItems}) {
   };
   
   
-  
+
    
  
   return (
-   <div className={styles.container}>
    <>
    <div className={styles.container}>
 
@@ -78,7 +77,5 @@ export default function PromoCarousel({promotionItems}) {
       </Carousel.Item>
     </Carousel>
   </div>
-  );
-}
-
-
+  )
+  }
