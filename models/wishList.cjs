@@ -19,7 +19,6 @@ wishListSchema.statics.getWishList = function (userID) {
     { user: userID },
     //if the user id is not found, create a new order
     { user: userID },
-    //return the new order
     { upsert: true, new: true }
   );
 };
@@ -31,7 +30,7 @@ wishListSchema.methods.addItem = async function (itemID) {
   const item = wishList.items.find((item) => item._id.equals(itemID));
 
   if (!item) {
-    //if item is not in cart, add item to cart
+
     const item = await mongoose.model('Item').findById(itemID);
     wishList.items.push(item);
   }
@@ -41,7 +40,7 @@ wishListSchema.methods.addItem = async function (itemID) {
 //this method is to set the quantity of an item in the cart, it will add item if it doesn't already exist
 wishListSchema.methods.setItemQty = function (itemID, newQty) {
   const cart = this;
-  //checking if item is already in cart
+  //checking if item is already in whishlist
   const lineItem = cart.lineItems.find((lineItem) =>
     lineItem.item._id.equals(itemID)
   );
