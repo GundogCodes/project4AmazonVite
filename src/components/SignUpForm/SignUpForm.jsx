@@ -56,7 +56,7 @@ export default function CreateAccountForm({ user, setUser }) {
             <Link to="/">
                 <img
                     className={styles.createAccountLogo}
-                    src="/img/scamazon-logo.png"
+                    src="https://selenakitt.com/wp-content/files/scamazon.png"
                     alt="Scamazon Logo"
                 />
             </Link>

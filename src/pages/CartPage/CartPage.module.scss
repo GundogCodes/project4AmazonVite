@@ -2,13 +2,17 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 12vh;
+    margin-top: 11vh;
     height: 100vh;
     color: white;
     background-color: rgb(237, 235, 234);
     padding: 0 20px;
     .userName {
-        color: rgb(7, 7, 7);
+        flex-direction:row;
+        color: rgb(0, 0, 0);
+        p {
+            font-size: 24px;
+        }
     }
     .Ordersdetails {
         display: flex;

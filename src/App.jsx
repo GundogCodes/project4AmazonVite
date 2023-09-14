@@ -18,7 +18,7 @@ import AddressFormPage from './pages/AddressFormPage/AddressFormPage'
 import YourPaymentPage from './pages/YourPaymentsPage/YourPaymentsPage'
 import EditUserPage from './pages/EditUserPage/EditUserPage'
 import {getUser} from '../src/utilities/users-service.cjs'
-import Footer from './components/Footer/Footer'
+
 import LogOut from './components/LogOut/LogOut'
 import CartPage from './pages/CartPage/CartPage'
 import CategoryBar from './components/CategoryBar/CategoryBar'

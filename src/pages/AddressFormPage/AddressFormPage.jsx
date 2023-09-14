@@ -60,10 +60,11 @@ export default function AddressForm({user, setUser}){
     }
     return(
         <div className={styles.AddressPage}>
+            <h1>Edit Your Address</h1>
         {user?
         <form onSubmit={handleSubmit} className={styles.AddressForm} >
             <div className={styles.currentAddress}>
-            <h1>Current Address</h1>
+            <h2>Current Address</h2>
             <p className={styles.username}>{user.name}</p>
             {gotAddress ?
             <>
@@ -83,7 +84,7 @@ export default function AddressForm({user, setUser}){
             
             </div>
             <div className={styles.theForm}>
-            <h1>Update Address</h1>
+            <h2>Update Address</h2>
             <h3>
             <span>Default:</span> <img src='https://selenakitt.com/wp-content/files/scamazon.png'/>
             </h3>

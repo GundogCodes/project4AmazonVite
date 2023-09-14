@@ -14,6 +14,7 @@ export default function LoginPage({ user, setUser }) {
    
     return (
         <div className={styles.loginContainer}>
+
             {showSignUp ?
             <>
                 <SignUpForm user={user} setUser={setUser} />
