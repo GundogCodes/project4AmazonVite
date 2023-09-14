@@ -10,7 +10,7 @@ import HomePage from './pages/HomePage/HomePage'
 import CategoryPage from './pages/CategoryPage/CategoryPage'
 import ItemPage from './pages/ItemPage/ItemPage'
 import LoginPage from './pages/LoginPage/LoginPage'
-import OrderPage from './pages/OrderPage/OrderPage'
+// import OrderPage from './pages/OrderPage/OrderPage'
 import SearchPage from './pages/SearchPage/SearchPage'
 import UserPage from './pages/UserPage/UserPage'
 import WishlistPage from './pages/WishlistPage/WishlistPage'
@@ -71,7 +71,7 @@ function App() {
       <Route path="/search" element={<SearchPage matchedSearches={matchedSearches} setMatchedSearches={setMatchedSearches} searchableItems={searchableItems} dataOfMatchedSearches={dataOfMatchedSearches} setDataOfMatchedSearches={setDataOfMatchedSearches}/>}/>
       <Route path="/item/:id" element={<ItemPage/>}/>
       <Route path="/categories/:name" element={searchableItems && <CategoryPage searchableItems={searchableItems} />}/>
-      <Route path="/orders" element={<OrderPage/>}/>
+      {/* <Route path="/orders" element={<OrderPage/>}/> */}
       <Route path="/address" element={<AddressFormPage user={user} setUser={setUser} />}/>
       <Route path="/payments" element={<YourPaymentPage user={user} setUser={setUser}/>}/>
       <Route path="/edit" element={<EditUserPage user={user} setUser={setUser}/>}/>
