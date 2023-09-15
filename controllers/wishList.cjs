@@ -41,8 +41,7 @@ async function removeItemFromWishList(req, res) {
     wishList.user = await User.findById(req.user._id);
     await wishList.removeItem(req.params.id);
     res.status(200).json(wishList);
-  } catch (error) {
-    console.log(e);
+  } catch (e) {
     res.status(400).json({ msg: e.message });
   }
 }
