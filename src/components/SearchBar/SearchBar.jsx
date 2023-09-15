@@ -25,14 +25,12 @@ export default function SearchBar({ searchableItems, user, matchedSearches,setMa
     function handleChange(e){
         const foundSearchedItem = []
         setUserSearch(e.target.value)
-        console.log('user is typing: ',userSearch)
         if( userSearch === null || userSearch === '  Search Scamazon.com'){
             setMatchedSearches([])
         } else{
             for(let name of itemNameArr){
                 
                 if(name.toLowerCase().includes(userSearch.toLowerCase())){
-                    //console.log('search matches this item: ', name)
                     foundSearchedItem.push(name)
                     setMatchedSearches(foundSearchedItem)
                 }
@@ -41,8 +39,6 @@ export default function SearchBar({ searchableItems, user, matchedSearches,setMa
     }
     function handleButtonClick(){
         const idOfMatchedResult = []
-        console.log('button clicked: ',inputBar.current.value)
-        console.log('all returned items', matchedSearches)
         for(let element of matchedSearches){
             for(let item of searchableItems){
                 if(element === item.name){
@@ -63,13 +59,13 @@ export default function SearchBar({ searchableItems, user, matchedSearches,setMa
     
     function handleLiClick(e){
         const clickedItem = e.target.innerText
-        console.log('clickedItem ', clickedItem)
+
         const indexOfClickedItem = itemNameArr.indexOf(clickedItem)
         const idOfClickedItem = itemIdArr[indexOfClickedItem]
-        console.log('indexofclickedItem', indexOfClickedItem)
-        console.log('idOfClickedItem',idOfClickedItem)
 
-        console.log('ClICKEDITEM ID : ', idOfClickedItem)
+
+
+
         navigate(`/item/${idOfClickedItem}`)
 
     }
@@ -77,8 +73,8 @@ export default function SearchBar({ searchableItems, user, matchedSearches,setMa
     function handleKeyDown(e){
         if(e.code ==='Enter'){
             const idOfMatchedResult = []
-        console.log('button clicked: ',inputBar.current.value)
-        console.log('all returned items', matchedSearches)
+
+
         for(let element of matchedSearches){
             for(let item of searchableItems){
                 if(element === item.name){

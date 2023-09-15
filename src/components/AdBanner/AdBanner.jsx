@@ -1,13 +1,7 @@
 import styles from './AdBanner.module.scss'
 import { Link } from 'react-router-dom'
 export default function AdBanner({promotionItems, pickerArr,}){
-    // console.log(promotionItems)
-    // console.log(pickerArr)
-    // console.log('searchable Items in echo',promotionItems[1][pickerArr[1]] )//echo
-    // console.log('searchable Items in ring',promotionItems[1][pickerArr[2]] )//echo
-    // console.log('searchable Items in Ps5',promotionItems[1][pickerArr[3]] )//echo
-    // console.log('searchable Items in meta',promotionItems[1][pickerArr[4]] )//echo
-    // console.log('searchable Items in meta',promotionItems[1][pickerArr[5]] )//echo
+
 
 
     return(

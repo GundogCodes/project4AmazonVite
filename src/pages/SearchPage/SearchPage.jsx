@@ -6,7 +6,7 @@ import { useNavigate ,Link} from "react-router-dom"
 
 
 export default function SearchPage({matchedSearches,setMatchedSearches, searchableItems, dataOfMatchedSearches, setDataOfMatchedSearches}){
-    //console.log('matchedSearched in SP', matchedSearches[0])
+
     const navigate = useNavigate()
     const itemElement = useRef()
 
@@ -52,14 +52,3 @@ export default function SearchPage({matchedSearches,setMatchedSearches, searchab
     )
 }
 
-
-/*
-
- const clickedItem = e.target.name
-        console.log('clicked Item ',clickedItem)
-        const getIndexOfClickedItem  = matchedSearches.indexOf(clickedItem)
-        console.log('index of clicked item', getIndexOfClickedItem)
-        const idOfClickedItem = dataOfMatchedSearches[getIndexOfClickedItem]
-        console.log('idofClickedItem', idOfClickedItem)
-        navigate(`/item/${idOfClickedItem}`)
- */

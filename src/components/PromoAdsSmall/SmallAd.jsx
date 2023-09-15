@@ -11,7 +11,6 @@ export default function SmallAd({promotionItems}) {
     for (let items of promotionItems) {
       smallAdItems.push(items)
     }
-  //  console.log(smallAdItems, 'smallAdItems')
     
     return (
         <main className={styles.SmallAd}>
@@ -38,7 +37,7 @@ export default function SmallAd({promotionItems}) {
                     <p className={styles.price}>${promotionItems[0][22].price}</p>
                 </div>
             </div>    
-            
+             
             <div className={styles.midCol }>
                 <div className={styles. topRow } >
                     <p className={styles.titles} >{promotionItems[0][40].name}</p>

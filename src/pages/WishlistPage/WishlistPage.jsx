@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import styles from './WishlistPage.module.scss';
 import {
   getWishList,
-  addToWishList,
-  removeItem,
+
+  removeItem
 } from '../../utilities/wishList-api.cjs';
-// import * as addToCart from '../ItemPage/Itempage.jsx'
+
 import { addToCart, getCart } from '../../utilities/orders-api.cjs';
 import LoginPage from '../LoginPage/LoginPage';
 import { Link } from 'react-router-dom';

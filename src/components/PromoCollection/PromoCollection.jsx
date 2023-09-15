@@ -9,15 +9,7 @@ export default function PromoCollection({promotionItems}) {
     for (let items of promotionItems) {
       collectionItems.push(items)
     }
-    //console.log(collectionItems, 'collectionItems')
 
-// const promoCollection = items.map(i => 
-//     <PromoItem
-//         name={i.name}
-//         price={i.price}
-//         image={i.image}
-//     /> 
-// )
 
     return (
         <main className={styles.PromoCollection}>
@@ -37,5 +29,5 @@ export default function PromoCollection({promotionItems}) {
     )
 }
 
-//check with Andrew for specific collection of items for ONE of his categories. 
+
 

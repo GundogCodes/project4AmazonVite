@@ -14,7 +14,7 @@ export default function AddressForm({user, setUser}){
     })
     const [gotAddress,setGotAddress] = useState(false)
 
-    //console.log('user.address',user.address)
+
     const [address,setAddress] = useState({
         street:'',
         city:'',
@@ -30,7 +30,7 @@ export default function AddressForm({user, setUser}){
 
     useEffect(()=>{
         const initUser = getUser()
-        console.log('initUser Address',initUser.address)
+
         if(!initUser.address){
             setInitUserAddress({
                 street:'',
@@ -51,7 +51,7 @@ export default function AddressForm({user, setUser}){
         e.preventDefault()
         try {
         const updatedAddress = await updateUserInfo(user._id, {address})
-        console.log('updated address', updatedAddress)
+
         setGotAddress(true)
         setNewAddress(address)
         } catch (error) {

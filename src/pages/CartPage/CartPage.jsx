@@ -7,17 +7,11 @@ export default function CartPage({ user, searchableItems }) {
     const [cart, setCart] = useState(null);
     const [random3Items, setRandom3Items] = useState([]);
     const navigate = useNavigate();
-    
-    useEffect(() => {
-        if (!user) {
-            navigate('/login');
-        }
-    }, []);
 
     function getRandomItem(arr) {
         return arr[Math.floor(Math.random() * arr.length)];
     }
-    
+
     function setRandomItems() {
         const newRandomItems = [...random3Items];
         const addedIds = new Set();
@@ -106,8 +100,7 @@ export default function CartPage({ user, searchableItems }) {
     return (
         <div className={styles.CartPage}>
             <div className={styles.userName}>
-            <h1>Scamazon</h1>
-            <p>"We deliver imaginary solutions to your imaginary problems." -CEO and Boy Band Lead Singer, Melon Husk</p>
+                <h1>{user.name}</h1>
             </div>
             <div className={styles.Ordersdetails}>
                 <div className={styles.OrdersList}>

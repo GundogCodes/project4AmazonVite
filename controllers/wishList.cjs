@@ -13,7 +13,6 @@ module.exports = {
 // Creating a wishlist
 async function wishList(req, res) {
   try {
-    console.log('req.user._id: ', req.user._id);
     const wishList = await WishList.getWishList(req.user._id);
     res.status(200).json(wishList);
   } catch (e) {
@@ -29,7 +28,6 @@ async function addToWishList(req, res) {
     await wishList.addItem(req.params.id);
     res.status(200).json(wishList);
   } catch (e) {
-    console.log(e);
     res.status(400).json({ msg: e.message });
   }
 }

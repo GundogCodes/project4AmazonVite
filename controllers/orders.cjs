@@ -3,14 +3,12 @@ const User = require('../models/user.cjs');
 
 module.exports = {
   cart,
-  //createCart,
   addToCart,
   setItemQtyInCart,
   checkout,
   history,
 };
 
-// A cart is the unpaid order for a user
 async function cart(req, res) {
   try {
    
@@ -21,29 +19,6 @@ async function cart(req, res) {
   }
 }
 
-// async function createCart(req, res) {
-//     try {
-//         console.log('req.user._id:', req.user._id);
-//         console.log('req.body:', req.body);
-
-//         req.body.user = req.user._id;
-//         const cart = await Order.create(req.body);
-
-//         console.log('cart created:', cart);
-
-//         req.user.cart = { _id: cart._id };
-//         await req.user.save();
-
-//         console.log('user cart updated:', req.user);
-
-//         res.json(cart);
-//     } catch (error) {
-//         console.error('Error creating cart:', error);
-//         res.status(400).json({ message: error.message });
-//     }
-// }
-
-//Add an item to the cart
 async function addToCart(req, res) {
   try {
     const cart = await Order.getCart(req.user._id);

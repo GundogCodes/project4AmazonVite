@@ -4,7 +4,6 @@ import * as usersService from '../../utilities/users-service.cjs'
 import styles from './LoginForm.module.scss';
 
 import { Link,useNavigate} from 'react-router-dom';
-//import App from '../../App.jsx';
 
 import SignUpForm from '../SignUpForm/SignUpForm';
 

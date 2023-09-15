@@ -35,24 +35,9 @@ const userSchema = new Schema(
       required: true,
     },
 
-    //review this with josh
-    //make this a seperate schema
-    /*************************** */
-    // address: {
-    //     street: { type: String, trim: true },
-    //     city: { type: String, trim: true },
-    //     state: { type: String, trim: true },
-    //     zip: { type: String, trim: true },
-    //     lowerCase: true,
-    //     trim: true,
-    //     required: true
-    // },
-
-    /*************************** */
 
     address: addressSchema,
 
-    /******* im unsure if this is actually going to work *******/
 
     phoneNumber: {
       type: String,
@@ -72,7 +57,6 @@ const userSchema = new Schema(
 );
 
 userSchema.pre('save', async function (next) {
-  // single line if statement, if password is not modified, return next
   if (!this.isModified('password')) return next();
   this.password = await bcrypt.hash(this.password, SALT_ROUNDS);
   return next();
