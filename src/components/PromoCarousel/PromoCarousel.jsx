@@ -22,8 +22,7 @@ export default function PromoCarousel({promotionItems}) {
  
   return (
    <div className={styles.container}>
-   <>
-   <div className={styles.container}>
+   {/* <div className={styles.container}/> */}
 
 
     <Carousel activeIndex={styles.index} onSelect={handleSelect} className={styles.Carousel}>
