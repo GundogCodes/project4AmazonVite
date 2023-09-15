@@ -22,14 +22,14 @@ export default function PromoCollection({promotionItems}) {
     return (
         <main className={styles.PromoCollection}>
             <div className={styles.collectionBanner1} >
-                <p className={styles.p} >{collectionItems[0][58].description}</p>
-                <Link to={`item/${promotionItems[0][58]._id}`} className={styles.sm}>
+                <p className={styles.p} >{collectionItems[0][60].description}</p>
+                <Link to={`item/${promotionItems[0][60]._id}`} className={styles.sm}>
                     <Image className={styles.promCollImg} src='./img/lego-barbie.png'  />
                 </Link>
             </div>
             <div className={styles.collectionBanner2} >
-                <p className={styles.p} >{collectionItems[0][49].description}</p>
-                <Link to={`item/${promotionItems[0][49]._id}`} className={styles.sm}>
+                <p className={styles.p} >{collectionItems[0][59].description}</p>
+                <Link to={`item/${promotionItems[0][59]._id}`} className={styles.sm}>
                     <Image className={styles.promCollImg} src='./img/pokemon-emerald.png'  />
                 </Link>
             </div>
