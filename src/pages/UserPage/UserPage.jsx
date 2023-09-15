@@ -19,7 +19,7 @@ export default function UserPage({user,setUser}){
             <h1>Your Account</h1>
             
             <div className={styles.row1}>
-            <Link to='/orders'>
+            <Link to='/payments'>
             <div style={{color:'Black'}} className={styles.box} >
             <img src='https://m.media-amazon.com/images/G/15/x-locale/cs/help/images/gateway/self-service/order._CB661170529_.png'/>
             <div className={styles.pDiv}>

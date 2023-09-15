@@ -4,7 +4,7 @@ import styles from './HomePage.module.scss';
 //import { Link, useNavigate } from 'react-router-dom';
 import PromoAdsSmall from '../../components/PromoAdsSmall/SmallAd';
 import PromoCarousel from '../../components/PromoCarousel/PromoCarousel';
-import Footer from '../../components/Footer/Footer';
+
 import PromoCollection from '../../components/PromoCollection/PromoCollection';
 import AdBanner from '../../components/AdBanner/AdBanner';
 //import PromoMedia from '../../components/PromoMedia/PromoMedia.jsx'
