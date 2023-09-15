@@ -12,7 +12,10 @@ export default function PromoCarousel({promotionItems}) {
       setIndex(selectedIndex);
   };
   return (
+
    <div className={styles.container}>
+
+
     <Carousel activeIndex={styles.index} onSelect={handleSelect} className={styles.Carousel}>
 
       <Carousel.Item className={styles.CarouselItem} styles={{backgroundPosition:'cover'}} >
@@ -60,6 +63,9 @@ export default function PromoCarousel({promotionItems}) {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    
   </div>
   );
 }
+
+
