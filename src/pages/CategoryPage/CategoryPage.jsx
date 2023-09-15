@@ -8,29 +8,19 @@ export default function CategoryPage({searchableItems}){
     const [neededItems, setNeededItems] = useState(null)
     const [category, setCategory] = useState('')
     
-    //console.log('nameOfCategory', name)
-    //console.log('searchableItems in CategoryPage: ', searchableItems)
-
-    // if(name === 'sportingGoods'){
-    //     setCategory('Sporting Goods')
-    // } else if(name==='makeUpAndCosmetics'){
-    //     setCategory('Make-up And Cosmetics')
-    // } else{
-    //     setCategory(name)
-    // }
 
     useEffect(()=>{
         setCategory(name)
     const matchedCategoryItems = []
         for(let items of searchableItems){
-            // console.log(items.category.name)
+
             if(items.category.name === name){
                 matchedCategoryItems.push(items)
             }
         }
         setNeededItems(matchedCategoryItems)
         
-        //console.log('neededItems ',neededItems)
+
     },[name])
        
 
@@ -56,7 +46,7 @@ export default function CategoryPage({searchableItems}){
                         </div></Link>
                 })}
             </section>
-            {/* <Footer/> */}
+
         </div>
     )
 }

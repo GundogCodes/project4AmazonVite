@@ -9,8 +9,7 @@ function createJWT(user) {
 
 //checkToken function which responds with the expiry of the the token
 function checkToken(req, res) {
-  console.log('req.user', req.user);
-  console.log('req.exp', req.exp);
+
   res.json(req.exp);
 }
 
@@ -27,15 +26,11 @@ const dataController = {
     try {
       const user = await User.create(req.body);
       const token = createJWT(user);
-      console.log(user);
       req.user = user;
       res.locals.data.user = user;
       res.locals.data.token = token;
-      console.log('----res.locals.data.user-----', res.locals.data.user);
-      console.log('----res.locals.data.token-----', res.locals.data.token);
       next();
     } catch (error) {
-      console.log('Ya gatta database prablem son');
       res.status(400).json({ error: error.message });
     }
   },
@@ -62,8 +57,6 @@ const dataController = {
       if (!match) throw new Error();
       res.locals.data.user = user;
       res.locals.data.token = createJWT(user);
-      console.log('----res.locals.data.user-----', res.locals.data.user);
-      console.log('----res.locals.data.token-----', res.locals.data.token);
       next();
     } catch (error) {
       res.status(400).json('Bad Credentials');
@@ -73,7 +66,7 @@ const dataController = {
   //U
   async updateUser(req, res, next) {
     try {
-      console.log(req.user);
+
       const updatedUser = await User.findOneAndUpdate(
         { _id: req.params.id },
         req.body,
@@ -81,9 +74,7 @@ const dataController = {
       );
 
       res.json(updatedUser);
-      // res.locals.data.user = updatedUser;
-      // res.locals.data.token = req.user.token;
-      // next();
+
     } catch (error) {
       res.status(400).json(error.message);
     }
@@ -93,11 +84,7 @@ const dataController = {
   async deleteUser(req, res, next) {
     try {
       const findUser = await User.findOne({ _id: req.params.id });
-      console.log(findUser);
-      console.log('findUser.email', findUser.email);
-      console.log('req.body', req.body.email);
       const match = await bcrypt.compare(req.body.password, findUser.password);
-      console.log(match);
       if (findUser.email !== req.body.email || !match) {
         res.json('Password is incorrect or not Authorized');
       } else if (findUser.email === req.body.email && match) {

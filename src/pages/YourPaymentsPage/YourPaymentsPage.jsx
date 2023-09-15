@@ -23,15 +23,15 @@ export default function YourPaymentPage({user,setUser}){
         fetchOrderHistory()
     },[])
 
-    //console.log('userOrders', userOrders[0].lineItems)
+
     const preOrders = []
     for(let oldOrder of userOrders){
-       // console.log('oldOrder.lineItems: ',oldOrder.lineItems)
+
         preOrders.push(oldOrder.lineItems)
     }
 
-    // setPreviousOrders(preOrders)
-     //console.log('previousOrders', preOrders)
+
+
 
     function handleTabClick(e){
         const innerText = e.target.innerText
@@ -45,7 +45,7 @@ export default function YourPaymentPage({user,setUser}){
     const allItems = []
     for(let order of preOrders){
         for(let eachOrder of order){
-         //   console.log('eachOrder item: ', eachOrder)
+
             allItems.push(eachOrder)
         }
     }
@@ -103,7 +103,7 @@ export default function YourPaymentPage({user,setUser}){
                         allItems.map((item)=>{
                             return <Link to={`/item/${item.item._id}`}><div className={styles.itemCard}  style={{color:'black'}} >
                                 <div className={styles.imageSide}>
-                                    {console.log(item)}
+
                                 <p className={styles.itemName} >{item.item.name}</p>
                                 <img  className={styles.itemImage} src={item.item.image}/>
                                 </div>

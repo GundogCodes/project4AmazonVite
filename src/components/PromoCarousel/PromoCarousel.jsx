@@ -4,15 +4,11 @@ import { Carousel, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 export default function PromoCarousel({promotionItems}) {
     const [index, setIndex] = useState(0);
-  // console.log(promotionItems)
-  // console.log(promotionItems[0].name)
   const carouselItems = []
   for (let items of promotionItems) {
     carouselItems.push(items)
   }
-  //console.log(carouselItems, 'carouselItems')
   const handleSelect = (selectedIndex) => {
-      console.log('clicked')
       setIndex(selectedIndex);
   };
   return (
@@ -27,7 +23,7 @@ export default function PromoCarousel({promotionItems}) {
         <Carousel.Caption style={{color:'black'}} className={styles.caption}>
           <h3 className={styles.cardTitle}>{carouselItems[0][1].name}</h3>
           <p className={styles.itemDesc}>{promotionItems[0][1].description}</p>
-          <a href= {`item/${promotionItems[4]._id}`} className={styles.sm} > Buy Now! </a>
+          <a href= {`item/${promotionItems[0][1]._id}`} className={styles.sm} > Buy Now! </a>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item className={styles.CarouselItem} >
@@ -37,8 +33,8 @@ export default function PromoCarousel({promotionItems}) {
           /> </Link>
         <Carousel.Caption className={styles.caption}>
           <h3 className={styles.cardTitle}>{carouselItems[0][50].name}</h3>
-          <p className={styles.itemDesc}>{promotionItems[0][50].description}</p>
-          <a href= {`item/${promotionItems[0][48]._id}`} className={styles.sm} > Buy Now! </a>
+
+          <a href= {`item/${promotionItems[0][50]._id}`} className={styles.sm} > Buy Now! </a>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item className={styles.CarouselItem} >
@@ -49,7 +45,7 @@ export default function PromoCarousel({promotionItems}) {
         <Carousel.Caption className={styles.caption}>
           <h3 className={styles.cardTitle}>{carouselItems[0][27].name}</h3>
           <p className={styles.itemDesc}>{promotionItems[0][27].description}</p>
-          <a href= {`item/${promotionItems[0][48]._id}`} className={styles.sm} > Buy Now! </a>
+          <a href= {`item/${promotionItems[0][27]._id}`} className={styles.sm} > Buy Now! </a>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item className={styles.CarouselItem} >

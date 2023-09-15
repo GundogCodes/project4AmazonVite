@@ -14,7 +14,7 @@ export default function CreateAccountForm({ user, setUser }) {
         confirmPassword: '',
     });
     const [error, setError] = useState('');
-    // const [showSignUpForm, setShowSignUpForm] = useState(false);
+
      const navigate = useNavigate()
     function handleClick() {
         navigate('/user');

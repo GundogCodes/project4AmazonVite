@@ -14,14 +14,14 @@ export default function ItemPage() {
   const [wishList, setWishList] = useState(null);
   const navigate = useNavigate();
 
-  console.log('krazy kart time:', cart);
+
   async function handleAddToCart() {
     const updatedCart = await addToCart(id);
     setCart(updatedCart);
     navigate('/cart');
   }
 
-  console.log('test wishList:', wishList);
+
   async function handleAddToWishList() {
     const updatedWishList = await addToWishList(id);
     setWishList(updatedWishList);
@@ -35,7 +35,7 @@ export default function ItemPage() {
         const wishList = await getWishList();
         setWishList(wishList);
       } catch (error) {
-        console.log(error);
+
       }
     })();
   }, []);
@@ -47,7 +47,7 @@ export default function ItemPage() {
         const cart = await getCart();
         setCart(cart);
       } catch (error) {
-        console.log(error);
+
       }
     })();
   }, [id]);
@@ -59,7 +59,7 @@ export default function ItemPage() {
         const item = await getById(id);
         setItem(item);
       } catch (error) {
-        console.log(error);
+
       }
     })();
   }, [id]);

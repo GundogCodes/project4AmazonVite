@@ -6,7 +6,7 @@ export default function CategoryBar(){
   function handleOnClick(e){
 
     const innerText = e.target.innerText
-    console.log(innerText)
+
       navigate(`/categories/${innerText}`)
       
     

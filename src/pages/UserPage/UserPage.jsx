@@ -6,7 +6,7 @@ import Footer from '../../components/Footer/Footer'
 
 export default function UserPage({user,setUser}){
    
-    //console.log('user(from userPage) : ',user)
+
     
     return(
         

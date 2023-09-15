@@ -1,10 +1,10 @@
 import styles from './EditUserPage.module.scss'
 import {useState, useRef, useEffect} from 'react'
 import { updateUserInfo } from '../../utilities/users-api.cjs'
-import LoginPage from '../LoginPage/LoginPage'
+
 import { getUser } from '../../utilities/users-service.cjs'
-import { useNavigate } from 'react-router-dom'
-// userId, newData
+
+
 export default function EditUserPage({user, setUser}){
     const [initUser,setInitUser] = useState({
         name:'',
@@ -30,7 +30,7 @@ export default function EditUserPage({user, setUser}){
         e.preventDefault()
         try {
             const updatedUser = await updateUserInfo(user._id,userData)
-            console.log('updatedUser ', updatedUser)
+
             setUpdatedData(true)
             setUserData(updatedUser)
         } catch (error) {
@@ -39,7 +39,7 @@ export default function EditUserPage({user, setUser}){
     }
     function handleChange(e){
         setUserData({...userData,[e.target.name]:e.target.value})
-        console.log(userData)
+
     }
     
     useEffect(()=>{
@@ -50,7 +50,7 @@ export default function EditUserPage({user, setUser}){
     function handleEditClick(e){
         e.preventDefault()
         const buttonName = e.target.name
-        console.log(e.target.name)
+
         if(buttonName === 'name'){
             setEditButtName(!editButtName)
         } else if(buttonName ==='email'){
