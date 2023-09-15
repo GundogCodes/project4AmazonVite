@@ -77,7 +77,7 @@ function App() {
       <Route path="/edit" element={<EditUserPage user={user} setUser={setUser}/>}/>
       <Route path="/login" element={<LoginPage user={user} setUser={setUser}/>}/>
       <Route path="/wishlist" element={<WishlistPage user={user} setUser={setUser}/>}/>
-      <Route path="/cart" element={<CartPage user={user} setUser={setUser} searchableItems={searchableItems}/>} />
+      <Route path="/cart" element={searchableItems && <CartPage user={user} setUser={setUser} searchableItems={searchableItems}/>} />
     </Routes>
       <LogOut user={user} setUser={setUser} />
     </>
