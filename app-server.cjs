@@ -12,6 +12,7 @@ const logger = require('morgan');
 
 //using json packages to communicate with server/clients
 app.use(express.json());
+app.use(express.static('dist'));
 
 //app will use a local object in its responses which can contain info from the requests
 app.use((req, res, next) => {
@@ -37,7 +38,7 @@ app.use('/api/wish-list/', require('./routes/wishList.cjs'));
 
 // catch all for wrong routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 module.exports = app;

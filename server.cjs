@@ -15,9 +15,6 @@ db.on('open', () => {
 
 /* Middleware */
 // app.use(express.json());
-// if (process.env.NODE_ENV !== 'development') {
-//   app.use(express.static('public'));
-// }
 
 /* forcing express to recognize an object as data */
 // app.use((req, res, next) => {
