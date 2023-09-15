@@ -20,7 +20,7 @@ export default function WishlistPage({ user }) {
     })();
   }, []);
 
-  console.log(userWishlist);
+
   //Image, name, price
   const items = userWishlist.items;
 
