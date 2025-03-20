@@ -1,7 +1,11 @@
-const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGO_URI);
+require('dotenv').config({ path: '/root/project4AmazonVite/.env' });
 
+console.log("HERE: ",process.env.MONGODB_URI);
+const mongoose = require("mongoose");
+
+mongoose.connect(process.env.MONGODB_URI);
+require('dotenv').config({ path: '../.env' });
 const db = mongoose.connection;
 
 if (process.env.NODE_ENV == 'development') {

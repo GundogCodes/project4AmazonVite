@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ path: '../.env' });
 require('./database.cjs');
 
 const Category = require('../models/category.cjs');
